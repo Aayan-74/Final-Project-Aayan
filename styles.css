@@ -1,4 +1,133 @@
-body {font-size: 62.5%; line-height: 1.6rem;}
-header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 100%;}
+body {font-size: 62.5%; line-height: 1.6rem; justify-content: center; align-items: center; font-family: "Open Sans", sans-serif; background-color: burlywood}
+
+header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 95%;}
+
 ul {list-style: none; padding: 0; margin: 0;}
+
 ul li {background-color: burlywood;}
+
+ul li a {text-decoration: none; color: black; padding: 0.5rem 1rem; display: block;}
+
+ul li a:hover {background-color: darkgoldenrod; color: white;}
+
+ul li a.active {background-color: darkgoldenrod; color: white;}
+
+button {background-color: darkgoldenrod; color: white; border: none; padding: 0.5rem 1rem; cursor: pointer;}
+
+button:hover {background-color: burlywood; color: black;}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f9f2ec;
+}
+.left-menu {
+  display: flex;
+  align-items: center;
+}
+
+.left-menu .menu-icon {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.left-menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3a2a1d;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  padding: 6px 12px; /* Gives padding like a button */
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.left-menu a:hover {
+  background-color: #e4d5c3; /* Soft beige-brown background */
+  color: #000; /* Darker text on hover */
+  cursor: pointer;
+}
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu .icon {
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.search-bar {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-left: 15px;
+}
+
+
+/* Hero Section with background image */
+.hero-section {
+  position: relative;
+  height: 40rem;
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Text on top of background */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3a2a1d;
+  text-align: center;
+}
+
+.overlay-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: "Archivo Black", sans-serif;
+}
+
+.overlay-text h2 {
+  margin-top: 10px;
+  letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: "Open Sans", sans-serif;
+}
+
+.center-content {padding: 2rem;
+max-width: 80rem;
+margin: 2rem auto;
+background-color: #f9f2ec;
+border-radius: 0.5rem;
+box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+justify-content: center;
+align-self: center;}
+.nav-link {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 6px; /* makes it look like a button */
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000; /* optional: outlines like a button */
+}
