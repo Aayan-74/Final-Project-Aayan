@@ -1,24 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+        input, textarea {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 10rem;
+            padding: 0.5rem;
+            background-color: #c19a6b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #contact-us-heading {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 4rem;
+            padding: 4rem;
+            flex-wrap: wrap; /* Helps on small screens */
+        }
+
+        .contact-form {
+            background-color: antiquewhite;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            max-width: 30rem;
+            font-size: 1.6rem;
+            margin-top: 4rem;
+            box-sizing: border-box;
+        }
+
+        .contact-info h1 {
+            line-height: 1.6;
+            font-size: 1.6rem;
+            word-wrap: break-word;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #eee;
+            align-items: center;
+        }
+
+        .left-menu a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .right-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            margin: 0 1rem;
+            padding: 0.4rem;
+        }
+
+        .contact-info-section {
+            margin-bottom: 1.5rem;
+            padding: 2rem;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="left-menu">
+                <span class="menu-icon">&#9776;</span>
+                <a href="contact.html">CONTACT US</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="livingroom.html">LIVING ROOM</a>
+                <a href="bedroom.html">BEDROOM</a>
+                <a href="index.html">HOME</a>
+            </div>
+            <div class="right-menu">
+                <span class="icon">🛋️</span>
+                <input type="text" placeholder="Search..." class="search-bar" />
+                <span class="icon">🛒</span>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to reach out!</p>
+
+    <main class="contact-container">
+        <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h1 id="contact-us-heading">Contact us</h1>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Type Your Name Here" required />
+                <input type="email" id="email" name="email" placeholder="Type Your Email Here" required />
+                <textarea id="message" name="message" rows="4" placeholder="Type Your Message Here" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <h1 id="methods-of-reaching-out">Feel free to reach out to us using the following methods below:</h1>
+            <br>
+            <section class="contact-info-section">
+                <h2>Phone Number: 204-772-3330</h2>
+            </section>
+            <section class="contact-info-section">
+                <h2>Location 1: 1190-1200 St. James Street<br>Winnipeg, MB, R3H 0L2</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.888319178301!2d-97.20028000000002!3d49.9009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73a089ac00dd%3A0x7d4ca27d7defea3c!2sSurplus%20Furniture%20and%20Mattress%20Warehouse!5e0!3m2!1sen!2sca!4v1748807805847!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="contact-info-section">
+                <h2>Location 2: 990 Nairn Avenue<br>Winnipeg, MB, R2L 0Y2</h2>
+                <br>
+                <br>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82237.37443631614!2d-97.23453830273431!3d49.90034369999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea70c389309db7%3A0x1ecdd918ed4fc78d!2sSurplus%20Furniture%20and%20Mattress%20Warehouse!5e0!3m2!1sen!2sca!4v1748807910033!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
     </main>
 </body>
 </html>

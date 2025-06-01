@@ -15,13 +15,66 @@
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
-        };
-        #welcome-message {
-            text-align: right;
-            font-size: 1.2rem;
-            color: #333;
-            margin-top: 20px;
         }
+        #bedroom-furniture{
+            margin: 0 auto;
+            align-self: flex-end;
+        }
+        .welcome-statement {
+            text-align: center;
+            font-size: 1.7rem;
+            font-family: 'Archivo Black', sans-serif;
+            color: brown;
+            margin-left: 20px;
+            margin-bottom: auto;
+            margin-top: 20px;
+            text-decoration: solid brown 2px;
+            padding: 10px;
+            
+        }
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            font-family: 'Archivo Black', sans-serif;
+            color: brown;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: solid brown 2px;
+        }
+        * {
+    box-sizing: border-box;
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      gap: 60px;
+    }
+
+    .section img {
+      width: 500px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .text-block {
+      max-width: 600px;
+    }
+
+    .text-block p {
+      font-size: 1rem;
+      line-height: 1.8;
+      
+    }
+
+    .text-block strong {
+      font-weight: 700;
+      display: block;
+      margin-top: 20px;
+    }
+
+    
     </style>
 </head>
 <body>
@@ -33,6 +86,7 @@
     <a href="about.html">ABOUT US</a>
     <a href="livingroom.html">LIVING ROOM</a>
     <a href="bedroom.html">BEDROOM</a>
+    <a href="index.html">HOME</a>
     </div>
     <div class="right-menu">
     <span class="icon">🛋️</span>
@@ -50,17 +104,39 @@
 </main>
 <br>
 <br>
-<img src="/images/furniture-bed.jpg" alt="bedroom furniture">
-    <p id="welcome-message">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</p>
 <section class="center-content">
-    <h2>Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
-    Twin, full, queen or king size mattresses—find what you need at mattress factory outlet prices! It's time to stop paying for overpriced furnishings.</h2>
+<div class="section">
+<img src="/images/furniture-bed.jpg" alt="bedroom furniture" id="bedroom-furniture">
+<div class="text-block">
+<strong>
+    <h1 class="welcome-statement">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</h1>
+</strong>
+<p>At Surplus Furniture, we are committed to providing our customers with the best selection of quality furniture at unbeatable prices. Our team works tirelessly to source the finest pieces from top manufacturers, ensuring that you get the best value for your money.</p>
+</div>
+</div>
 </section>
 <section class="center-content">
-    <h2>We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.</h2>
+    <div class="section">
+        <img src="/images/Livingroom.jpg" alt="Picture of a sofa in a living room">
+    <div class="text-block">
+    <strong><p class="welcome-statement">Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
+    Twin, full, queen or king size mattresses—find what you need at mattress factory outlet prices! It's time to stop paying for overpriced furnishings.</p></strong>
+    </div>
+    </div>
 </section>
 <section class="center-content">
-    <h2>We also offer delivery and assembly services to make your shopping experience as convenient as possible. Our goal is to provide you with high-quality furniture at affordable prices, so you can create the home of your dreams without breaking the bank.</h2>
+    <p>We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.
+    We also offer delivery and assembly services to make your shopping experience as convenient as possible. Our goal is to provide you with high-quality furniture at affordable prices, so you can create the home of your dreams without breaking the bank.</p>
 </section>
+<footer>
+    <p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
+    <p>Follow us on social media: 
+        <a href="https://www.facebook.com/surplusfurniture" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank">Instagram</a> | 
+        <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank">Youtube</a> |
+        <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank">Pinterest</a> |
+        <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank">Tiktok</a>
+    </p>
+</footer>
 </body>
 </html>
