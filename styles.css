@@ -87,6 +87,8 @@ h1 {text-align: center;}
   border: 1px solid #ccc;
   outline: none;
   margin-left: 15px;
+  align-items: center;
+  
 }
 
 
@@ -155,8 +157,19 @@ footer {
   padding: 10px;
   margin-top: auto;
   width: 100%;
-  color: #fff;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.4rem;
   flex-shrink: 0;
   text-align: center;
   /* Removed position: fixed and bottom: 0 to prevent overlap */
+}
+footer p { text-align: center; font-size: 1.2rem; color: burlywood; margin-top: 20px; }
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: burlywood; /* Darker color on hover */
 }
