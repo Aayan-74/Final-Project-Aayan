@@ -12,7 +12,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 95%;}
 
 ul {list-style: none; padding: 0; margin: 0;}
@@ -25,17 +24,18 @@ ul li a:hover {background-color: darkgoldenrod; color: white;}
 
 ul li a.active {background-color: darkgoldenrod; color: white;}
 
-button {background-color: darkgoldenrod;
+button {background-color: chocolate;
   color: white;
   border: none; 
-  padding: 0.5rem 1rem; 
+  padding: 0.7rem 1rem; 
   cursor: pointer; 
   border-radius: 10px;
   font-family: "Open Sans", sans-serif;}
 
 button:hover {background-color: burlywood; color: black;}
 /* Navbar styles */
-h1 {text-align: center;}
+h1 {text-align: center; font-size: 1.6rem;}
+        h2 {text-align: center; font-size: 1.4rem;}
 
 .navbar {
   display: flex;
@@ -168,7 +168,11 @@ footer p { text-align: center; font-size: 1.2rem; color: burlywood; margin-top: 
 a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
   transition: color 0.3s;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+
 }
 a:hover {
   color: burlywood; /* Darker color on hover */

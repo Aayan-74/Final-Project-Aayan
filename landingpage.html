@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <style>
-        h1 {text-align: center; font-size: 1.6rem;}
-        h2 {text-align: center; font-size: 1.2rem;}
+        body {padding: 0;
+        margin: 0;}
         .center-content {animation: fadeIn 2s ease-in-out;}
         @keyframes fadeIn {
             from {opacity: 0;}
@@ -20,7 +20,7 @@
             margin: 0 auto;
             align-self: flex-end;
         }
-        .welcome-statement {
+        #welcome-statement {
             text-align: center;
             font-size: 1.7rem;
             font-family: 'Open Sans', sans-serif;
@@ -32,42 +32,64 @@
             padding: 10px;
             
         }
-        footer p { text-align: center; font-size: 1.2rem; color: burlywood; text-decoration: solid burlywood 2px; margin-top: 20px; font-family: 'Archivo Black', sans-serif; }
-
+        footer {
+    background-color: #3a2a1d;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    text-align: center;
+            
+        }
+footer p { text-align: center; font-size: 1.4rem; color: burlywood; text-decoration: solid, burlywood, 2px; margin-top: 20px; font-family: 'Archivo Black', sans-serif; }
         * {
     box-sizing: border-box;
     }
     .section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 40px;
-      gap: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 60px;
     }
 
     .section img {
-      width: 500px;
-      height: auto;
-      object-fit: cover;
+    width: 500px;
+    height: auto;
+    object-fit: cover;
     }
 
     .text-block {
-      max-width: 600px;
+    max-width: 600px;
     }
 
     .text-block p {
-      font-size: 1rem;
-      line-height: 1.8;
-      
+    font-size: 1rem;
+    line-height: 1.8;
+    color: brown;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 20px;
+        text-decoration: solid brown 2px;
+        padding: 10px;
     }
 
     .text-block strong {
-      font-weight: 700;
-      display: block;
-      margin-top: 20px;
+    font-weight: 700;
+    display: block;
+    margin-top: 20px;
     }
-
-    
+    #introductory-content {
+        text-align: center;
+        font-size: 1.2rem;
+        color: brown;
+        margin: 20px auto;
+        padding: 10px;
+        max-width: 800px;
+        font-family: 'Open Sans', sans-serif;
+    }
     </style>
 </head>
 <body>
@@ -102,7 +124,7 @@
 <img src="/images/furniture-bed.jpg" alt="bedroom furniture" id="bedroom-furniture">
 <div class="text-block">
 <strong>
-    <h1 class="welcome-statement">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</h1>
+    <h1 id="welcome-statement">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</h1>
 </strong>
 <strong>
     <p>At Surplus Furniture, we are committed to providing our customers with the best selection of quality furniture at unbeatable prices. Our team works tirelessly to source the finest pieces from top manufacturers, ensuring that you get the best value for your money.</p>
@@ -114,19 +136,22 @@
     <div class="section">
         <img src="/images/Livingroom.jpg" alt="Picture of a sofa in a living room">
     <div class="text-block">
-    <strong><p class="welcome-statement">Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
+    <strong><p>Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
     Twin, full, queen or king size mattresses—find what you need at mattress factory outlet prices! It's time to stop paying for overpriced furnishings.</p></strong>
     </div>
     </div>
 </section>
 <section class="center-content">
-    <strong>>
-    <p>We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.
+    <strong>
+    <p id="introductory-content">We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.
     We also offer delivery and assembly services to make your shopping experience as convenient as possible. Our goal is to provide you with high-quality furniture at affordable prices, so you can create the home of your dreams without breaking the bank.</p>
     </strong>
 </section>
+<br>
+<br>
+<br>
 <footer>
-    <p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
+    <b><p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
     <p>Follow us on social media: 
         <a href="https://www.facebook.com/surplusfurniture" target="_blank">Facebook</a> | 
         <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank">Instagram</a> | 
@@ -134,6 +159,7 @@
         <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank">Pinterest</a> |
         <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank">Tiktok</a>
     </p>
+    </b>
 </footer>
 </body>
 </html>
