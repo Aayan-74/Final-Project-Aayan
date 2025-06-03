@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bedroom Furniture</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
         function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-    
-    // Close when clicking outside
-    document.addEventListener('click', function closeMenu(e) {
-        if (!menu.contains(e.target) && e.target !== document.querySelector('.menu-icon')) {
-            menu.classList.remove("show");
-            document.removeEventListener('click', closeMenu);
+    document.getElementById("menuLinks").classList.toggle("show");
         }
-    });
-}
     </script>
 </head>
 <body>
@@ -45,19 +36,5 @@
             </div>
         </nav>
     </header>
-<main>
-    <h1>Welcome to Our Furniture Store</h1>
-    <p>Explore our wide range of furniture for every room in your home.</p>
-    <section class="categories">
-        <div class="category living-room">
-            <h2>Living Room</h2>
-            <p>Discover our collection of sofas, chairs, and coffee tables.</p>
-            <a href="livingroom.html">Shop Now</a>
-        </div>
-        <div class="category bedroom">
-            <h2>Bedroom</h2>
-            <p>Find the perfect bed, wardrobe, and nightstands for your bedroom.</p>
-            <a href="bedroom.html">Shop Now</a>
-        </div>
 </body>
 </html>

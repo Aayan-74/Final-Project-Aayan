@@ -173,16 +173,26 @@
       margin-bottom: 1.5rem;
     }
     </style>
+    <script>
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("show");
+}
+</script>
+
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <span class="menu-icon">&#9776;</span>
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <div class="menu-links" id="menuLinks">
+                <a href="living-room.html">LIVING ROOM</a>
+                <a href="bedroom.html">BEDROOM</a>
+                <a href="dinettes.html">DINETTES</a>
+                <a href="home-decor.html">HOME DECOR</a>
+                </div>
                 <a href="contact.html">CONTACT US</a>
                 <a href="about.html">ABOUT US</a>
-                <a href="livingroom.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
                 <a href="index.html">HOME</a>
             </div>
             <div class="right-menu">
