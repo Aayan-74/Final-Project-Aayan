@@ -10,31 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
         function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-    
-    // Close when clicking outside
-    document.addEventListener('click', function closeMenu(e) {
-        if (!menu.contains(e.target) && e.target !== document.querySelector('.menu-icon')) {
-            menu.classList.remove("show");
-            document.removeEventListener('click', closeMenu);
-        }
-    });
+    document.getElementById("menuLinks").classList.toggle("show");
 }
     </script>
     <style>
         .quick-links {
-            padding: 10px;
+            padding: 1rem;
             background-color: brown;
             box-sizing: border-box;
-            border-radius: 10px;
+            border-radius: 1rem;
             border: none;
             justify-content: center;
             align-items: center;
-            margin-left: 440px;
+            margin-left: 275px;
         }
         footer {
             width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -74,6 +69,7 @@
             <p>Find the perfect bed, wardrobe, and nightstands for your bedroom.</p>
             <a href="bedroom.html" class="quick-links">Shop Now</a>
         </div>
+    </main>
         </section>
         <br>
         <br>
