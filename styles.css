@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
 header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 95%;}
 
 ul {list-style: none; padding: 0; margin: 0;}
