@@ -83,6 +83,7 @@ h1 {text-align: center; font-size: 1.6rem;}
 .right-menu .icon {
   font-size: 24px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .search-bar {

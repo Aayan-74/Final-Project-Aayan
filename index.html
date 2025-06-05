@@ -12,6 +12,9 @@
         function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
 }
+document.getElementById("cart-icon").onclick =function () {
+    window.location.href ="cart.html";
+};
     </script>
     <style>
         .quick-links {
@@ -31,6 +34,25 @@
             margin: 0;
             padding: 0;
         }
+        .block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        view {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            
+        }
+        .image {
+            width: 20rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -49,20 +71,25 @@
                 <a href="index.html">HOME</a>
             </div>
             <div class="right-menu">
-                <span class="icon">🛋️</span>
+                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
                 <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon">🛒</span>
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
             </div>
         </nav>
     </header>
 <main>
+    <div class="view">
+        <div class="block"><img src="images/living-room-sofa.jpg" alt="A gray L-shaped sofa" class="image"></div>
+        <div class="block"><img src="images/grey-sofa.jpg" alt="A straight gray sofa and loveseat" class="image"></div>
+
+    </div>
     <section class="center-content">
     <h1>Welcome to Our Furniture Store</h1>
     <p>Explore our wide range of furniture for every room in your home.</p>
         <div class="category living-room">
             <h2>Living Room</h2>
             <p>Discover our collection of sofas, chairs, and coffee tables.</p>
-            <a href="livingroom.html" class="quick-links">Shop Now</a>
+            <a href="living-room.html" class="quick-links">Shop Now</a>
         </div>
         <div class="category bedroom">
             <h2>Bedroom</h2>

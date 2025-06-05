@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>living-room Furniture</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <script>
-    function toggleMenu() {
+        function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
 }
 document.getElementById("cart-icon").onclick =function () {
     window.location.href ="cart.html";
 };
-</script>
+    </script>
+    <style>
+        #logo {
+            justify-content: center;
+            align-items: center;
+            margin-right: 380px;
+        }
+        #best-sellers-link {
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: brown;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            margin-left: 138px;
+        }
+        #cart-empty {
+
+        }
+    </style>
 </head>
 <body>
-    <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
@@ -36,10 +55,21 @@ document.getElementById("cart-icon").onclick =function () {
             <div class="right-menu">
                 <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
                 <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+                <span class="icon">🛒</span>
             </div>
         </nav>
     </header>
-    <img src="images/sofa.jpg" alt="A soft grey sofa with extreme comfort">
+    <main>
+        <div id="cart-empty">
+        <h1>Your Cart</h1>
+        <b><h2>Uh oh. Looks like your cart is empty...</h2></b>
+        <h2>Don't know where to start?</h2>
+        </div>
+        <br>
+        <a href="index.html" id="best-sellers-link">Shop for best sellers here..</a>
+        <br>
+        <br>
+        <img src="images/bedroom furniture image.jpg" alt="white queen size bed with extreme comfort and huge amounts of padding">
+    </main>
 </body>
 </html>
