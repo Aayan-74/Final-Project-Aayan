@@ -12,6 +12,9 @@
     function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
         }
+        document.getElementById("cart-icon").onclick =function () {
+    window.location.href ="cart.html";
+};
 </script>
     <style>
         body {padding: 0;
@@ -37,19 +40,6 @@
             padding: 10px;
             
         }
-        footer {
-    background-color: #3a2a1d;
-    padding: 10px;
-    margin-top: auto;
-    width: 100%;
-    color: white;
-    font-family: "Archivo Black", sans-serif;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    text-align: center;
-            
-        }
-footer p { text-align: center; font-size: 1.4rem; color: burlywood; text-decoration: solid, burlywood, 2px; margin-top: 20px; font-family: 'Archivo Black', sans-serif; }
         * {
     box-sizing: border-box;
     }
@@ -96,18 +86,13 @@ footer p { text-align: center; font-size: 1.4rem; color: burlywood; text-decorat
         font-family: 'Open Sans', sans-serif;
     }
     </style>
-    <script>
-  function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
-}
-</script>
 
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
                 <div class="menu-links" id="menuLinks">
                 <a href="living-room.html">LIVING ROOM</a>
                 <a href="bedroom.html">BEDROOM</a>
@@ -119,9 +104,9 @@ footer p { text-align: center; font-size: 1.4rem; color: burlywood; text-decorat
                 <a href="index.html">HOME</a>
             </div>
             <div class="right-menu">
-                <span class="icon">🛋️</span>
+                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
                 <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+                <button class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</button>
             </div>
         </nav>
     </header>

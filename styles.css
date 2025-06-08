@@ -9,8 +9,8 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: burlywood;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 p {
   text-align: center;
@@ -20,7 +20,7 @@ header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 
 
 ul {list-style: none; padding: 0; margin: 0;}
 
-ul li {background-color: burlywood;}
+ul li {background-color: burlywood; text-align: center; font-size: 1.2rem;}
 
 ul li a {text-decoration: none; color: black; padding: 0.5rem 1rem; display: block;}
 
@@ -106,7 +106,7 @@ h1 {text-align: center; font-size: 1.6rem;}
     justify-content: center;
     align-items: center;
     
-  background-image: url('/images/background.png');
+  background-image: url('images/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,4 +223,90 @@ a:hover {
 
 .menu-links.show a {
     opacity: 1;
+}
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.img-col {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.img-col:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.img-col:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.img-col:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.img-col img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.img-col:hover img {
+  transform: scale(1.05);
+}
+
+/* Button styles */
+.img-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffffcc;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.img-btn:hover {
+  background-color: #000000cc;
+  color: #fff;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+  }
+
+  .img-col {
+    margin-top: 20px;
+  }
+
+  .img-btn {
+    bottom: 10px;
+    font-size: 14px;
+  }
 }

@@ -17,49 +17,18 @@ document.getElementById("cart-icon").onclick =function () {
 };
     </script>
     <style>
-        .quick-links {
-            padding: 1rem;
-            background-color: brown;
-            box-sizing: border-box;
-            border-radius: 1rem;
-            border: none;
-            justify-content: center;
-            align-items: center;
-            margin-left: 275px;
-        }
-        footer {
-            width: 100%;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .block {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-        view {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            
-        }
-        .image {
-            width: 20rem;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-        }
+        
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);;
+}
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
                 <div class="menu-links" id="menuLinks">
                 <a href="living-room.html">LIVING ROOM</a>
                 <a href="bedroom.html">BEDROOM</a>
@@ -73,31 +42,56 @@ document.getElementById("cart-icon").onclick =function () {
             <div class="right-menu">
                 <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
                 <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+                <button class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
             </div>
         </nav>
     </header>
-<main>
-    <div class="view">
-        <div class="block"><img src="images/living-room-sofa.jpg" alt="A gray L-shaped sofa" class="image"></div>
-        <div class="block"><img src="images/grey-sofa.jpg" alt="A straight gray sofa and loveseat" class="image"></div>
-
+        <main class="hero-section">
+    <div class="overlay-text">
+    <h1>Get Your Timeless Furniture Here:</h1>
+    <br>
+    <h2>Timeless design. Lasting comfort. Crafted to elevate every space.</h2>
     </div>
-    <section class="center-content">
-    <h1>Welcome to Our Furniture Store</h1>
-    <p>Explore our wide range of furniture for every room in your home.</p>
-        <div class="category living-room">
-            <h2>Living Room</h2>
-            <p>Discover our collection of sofas, chairs, and coffee tables.</p>
-            <a href="living-room.html" class="quick-links">Shop Now</a>
-        </div>
-        <div class="category bedroom">
-            <h2>Bedroom</h2>
-            <p>Find the perfect bed, wardrobe, and nightstands for your bedroom.</p>
-            <a href="bedroom.html" class="quick-links">Shop Now</a>
-        </div>
-    </main>
-        </section>
+</main>
+<br>
+<br>
+<section class="center-content">
+  <h1>Find Your Style</h1>
+  <p>Browse curated selections for the living room, bedroom, dining area, and more. Made to last. Designed to fit in.</p>
+</section>
+<div class="image-row">
+<div class="img-col">
+    <img src="images/bed1.jpg" alt="picture of a light brown wood bed">
+    <a href="bedroom.html" class="img-btn">Bedroom-Furniture</a>
+  </div>
+  <div class="img-col">
+    <img src="images/bed.jpg" alt="image of a dark brown wood bed">
+    <a href="bedroom.html" class="img-btn"> Bedroom-Furniture</a>
+  </div>
+  <div class="img-col">
+    <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair">
+    <a href="living-room.html" class="img-btn"> Living-Room Furniture</a>
+  </div>
+  <div class="img-col">
+    <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs">
+    <a href="living-room.html" class="img-btn">Dinettes</a>
+  </div>
+</div>
+<section class="center-content">
+  <h1>Simple pieces. Timeless spaces.</h1>
+  <p>We offer quality furniture for every room—clean lines, warm textures, and a focus on comfort. No clutter. Just what matters.</p>
+</section>
+<section class="center-content">
+  <h1>Why Choose Us?</h1>
+  <ul>
+    <li>✔ Handpicked quality at unbeatable prices</li>
+    <li>✔ Canadian-made and internationally sourced designs</li>
+    <li>✔ Fast delivery and excellent customer support</li>
+    <li>✔ New arrivals weekly—refresh your space today</li>
+    <li>✔ We promise to beat the in-stock advertised price of all competitors by 5%</li>
+  </ul>
+</section>
+
         <br>
         <br>
         <br>
