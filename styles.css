@@ -22,7 +22,7 @@ ul {list-style: none; padding: 0; margin: 0; font-weight: bold;}
 
 ul li {background-color: burlywood; text-align: center; font-size: 1.2rem;}
 
-ul li a {text-decoration: none; color: black; padding: 0.5rem 1rem; display: block;}
+ul li a {text-decoration: none; color: black; padding: 1rem 1rem; display: inline;}
 
 ul li a:hover {background-color: darkgoldenrod; color: white;}
 

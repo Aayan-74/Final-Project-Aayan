@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> <!-- Archivo Black font import -->
     <script>
         function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
@@ -25,18 +26,20 @@ document.getElementById("cart-icon").onclick =function () {
         #logo {
             justify-content: center;
             align-items: center;
-            margin-right: 380px;
+            margin-left: 20px;
         }
         #cart-image {
             margin-left: 550px;
         }
+        
+
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
                 <div class="menu-links" id="menuLinks">
                 <a href="living-room.html">LIVING ROOM</a>
                 <a href="bedroom.html">BEDROOM</a>
@@ -46,8 +49,9 @@ document.getElementById("cart-icon").onclick =function () {
                 <a href="contact.html">CONTACT US</a>
                 <a href="about.html">ABOUT US</a>
                 <a href="index.html">HOME</a>
-                <h1 class="surplusfurniture">Surplus Furniture</h1>
+                <h1 class="surplusfurniture" tabindex="0">Surplus Furniture</h1>
             </div>
+            
             <div class="right-menu">
                 <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
                 <input type="text" placeholder="Search..." class="search-bar" />
