@@ -18,7 +18,7 @@ p {
 }
 header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 95%;}
 
-ul {list-style: none; padding: 0; margin: 0;}
+ul {list-style: none; padding: 0; margin: 0; font-weight: bold;}
 
 ul li {background-color: burlywood; text-align: center; font-size: 1.2rem;}
 
@@ -28,15 +28,16 @@ ul li a:hover {background-color: darkgoldenrod; color: white;}
 
 ul li a.active {background-color: darkgoldenrod; color: white;}
 
-button {background-color: chocolate;
-  color: white;
+button {background-color: burlywood;
+  color: black;
   border: none; 
   padding: 0.7rem 1rem; 
   cursor: pointer; 
   border-radius: 10px;
-  font-family: "Open Sans", sans-serif;}
+  font-family: "Open Sans", sans-serif;
+font-weight: bold;}
 
-button:hover {background-color: burlywood; color: black;}
+button:hover {background-color: antiquewhite; color: brown; font-weight: bold;}
 /* Navbar styles */
 h1 {text-align: center; font-size: 1.6rem;}
         h2 {text-align: center; font-size: 1.4rem;}
@@ -310,3 +311,9 @@ a:hover {
     font-size: 14px;
   }
 }
+.surplusfurniture {
+            margin-left: 200px;
+            font-family: "Archivo Black", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+        }

@@ -1,110 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element, sets language to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+    <title>Document</title> <!-- Title shown in browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect for Google Fonts static resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> <!-- Archivo Black font import -->
     <script>
+        // Toggles the visibility of the navigation menu on small screens
         function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
-}
-document.getElementById("cart-icon").onclick =function () {
-    window.location.href ="cart.html";
-};
+            document.getElementById("menuLinks").classList.toggle("show");
+        }
+        // Redirects to cart page when cart icon is clicked
+        document.getElementById("cart-icon").onclick =function () {
+            window.location.href ="cart.html";
+        };
+        // Redirects to home page when logo is clicked
+        document.getElementById("logo").onclick =function () {
+            window.location.href ="index.html";
+        }
     </script>
     <style>
-        
-h1 {
-    font-family: "Archivo Black", sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);;
-}
+        /* Styles for main heading */
+        h1 {
+            font-family: "Archivo Black", sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);;
+            text-align: center;
+        }
+        /* Fade-in animation for center content */
+        .center-content {animation: fadeIn 2s ease-in-out;}
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        /* Margin for Surplus Furniture heading */
+        .surplusfurniture {
+            margin-left: 200px;
+        }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="left-menu">
-                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
-                <div class="menu-links" id="menuLinks">
-                <a href="living-room.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
-                <a href="dinettes.html">DINETTES</a>
-                <a href="home-decor.html">HOME DECOR</a>
+<body tabindex="0">
+    <!-- Header section with navigation bar -->
+    <header tabindex="0">
+        <nav class="navbar" tabindex="0">
+            <div class="left-menu" tabindex="0">
+                <!-- Hamburger menu icon for mobile navigation -->
+                <button class="menu-icon" onclick="toggleMenu()" tabindex="0">&#9776;</button>
+                <!-- Collapsible menu links -->
+                <div class="menu-links" id="menuLinks" tabindex="0">
+                    <a href="living-room.html" tabindex="0">LIVING ROOM</a>
+                    <a href="bedroom.html" tabindex="0">BEDROOM</a>
+                    <a href="dinettes.html" tabindex="0">DINETTES</a>
+                    <a href="home-decor.html" tabindex="0">HOME DECOR</a>
                 </div>
-                <a href="contact.html">CONTACT US</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="index.html">HOME</a>
+                <!-- Static navigation links -->
+                <a href="contact.html" tabindex="0">CONTACT US</a>
+                <a href="about.html" tabindex="0">ABOUT US</a>
+                <a href="index.html" tabindex="0">HOME</a>
+                <!-- Main site heading -->
+                <h1 class="surplusfurniture" tabindex="0">Surplus Furniture</h1>
             </div>
-            <div class="right-menu">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
-                <input type="text" placeholder="Search..." class="search-bar" />
-                <button class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+            <div class="right-menu" tabindex="0">
+                <!-- Company logo, clickable to go home -->
+                <span class="icon" id="logo" onclick="window.location.href='index.html'" tabindex="0">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="0">
+                </span>
+                <!-- Search bar for product search -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="0" />
+                <!-- Cart icon, clickable to go to cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="0">🛒</span>
             </div>
         </nav>
     </header>
-        <main class="hero-section">
-    <div class="overlay-text">
-    <h1>Get Your Timeless Furniture Here:</h1>
-    <br>
-    <h2>Timeless design. Lasting comfort. Crafted to elevate every space.</h2>
+    <!-- Hero section with main tagline -->
+    <main class="hero-section" tabindex="0">
+        <div class="overlay-text" tabindex="0">
+            <h1 tabindex="0">Simple. Elegant. Timeless.</h1>
+            <br tabindex="0">
+            <h2 tabindex="0">Timeless design. Lasting comfort. Crafted to elevate every space.</h2>
+        </div>
+    </main>
+    <br tabindex="0">
+    <br tabindex="0">
+    <!-- Section introducing product categories -->
+    <section class="center-content" tabindex="0">
+        <h1 tabindex="0">Find Your Style</h1>
+        <p tabindex="0">Browse curated selections for the living room, bedroom, dining area, and more. Made to last. Designed to fit in.</p>
+    </section>
+    <!-- Row of product category images with links -->
+    <div class="image-row" tabindex="0">
+        <div class="img-col" tabindex="0">
+            <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="0">
+            <a href="bedroom.html" class="img-btn" tabindex="0">Bedroom-Furniture</a>
+        </div>
+        <div class="img-col" tabindex="0">
+            <img src="images/bed.jpg" alt="image of a dark brown wood bed" tabindex="0">
+            <a href="bedroom.html" class="img-btn" tabindex="0"> Bedroom-Furniture</a>
+        </div>
+        <div class="img-col" tabindex="0">
+            <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="0">
+            <a href="living-room.html" class="img-btn" tabindex="0"> Living-Room Furniture</a>
+        </div>
+        <div class="img-col" tabindex="0">
+            <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="0">
+            <a href="living-room.html" class="img-btn" tabindex="0">Dinettes</a>
+        </div>
     </div>
-</main>
-<br>
-<br>
-<section class="center-content">
-  <h1>Find Your Style</h1>
-  <p>Browse curated selections for the living room, bedroom, dining area, and more. Made to last. Designed to fit in.</p>
-</section>
-<div class="image-row">
-<div class="img-col">
-    <img src="images/bed1.jpg" alt="picture of a light brown wood bed">
-    <a href="bedroom.html" class="img-btn">Bedroom-Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/bed.jpg" alt="image of a dark brown wood bed">
-    <a href="bedroom.html" class="img-btn"> Bedroom-Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair">
-    <a href="living-room.html" class="img-btn"> Living-Room Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs">
-    <a href="living-room.html" class="img-btn">Dinettes</a>
-  </div>
-</div>
-<section class="center-content">
-  <h1>Simple pieces. Timeless spaces.</h1>
-  <p>We offer quality furniture for every room—clean lines, warm textures, and a focus on comfort. No clutter. Just what matters.</p>
-</section>
-<section class="center-content">
-  <h1>Why Choose Us?</h1>
-  <ul>
-    <li>✔ Handpicked quality at unbeatable prices</li>
-    <li>✔ Canadian-made and internationally sourced designs</li>
-    <li>✔ Fast delivery and excellent customer support</li>
-    <li>✔ New arrivals weekly—refresh your space today</li>
-    <li>✔ We promise to beat the in-stock advertised price of all competitors by 5%</li>
-  </ul>
-</section>
-
-        <br>
-        <br>
-        <br>
-        <footer>
-    <b><p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
-    <p>Follow us on social media: 
-        <a href="https://www.facebook.com/surplusfurniture" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank">Instagram</a> | 
-        <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank">Youtube</a> |
-        <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank">Pinterest</a> |
-        <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank">Tiktok</a>
-    </p>
-    </b>
-</footer>
+    <!-- Section describing company philosophy -->
+    <section class="center-content" tabindex="0">
+        <h1 tabindex="0">Simple pieces. Timeless spaces.</h1>
+        <p tabindex="0">We offer quality furniture for every room—clean lines, warm textures, and a focus on comfort. No clutter. Just what matters.</p>
+    </section>
+    <!-- Section listing company advantages -->
+    <section class="center-content" tabindex="0">
+        <h1 tabindex="0">Why Choose Us?</h1>
+        <ul tabindex="0">
+            <li tabindex="0">✔ Handpicked quality at unbeatable prices</li>
+            <li tabindex="0">✔ Canadian-made and internationally sourced designs</li>
+            <li tabindex="0">✔ Fast delivery and excellent customer support</li>
+            <li tabindex="0">✔ New arrivals weekly—refresh your space today</li>
+            <li tabindex="0">✔ We promise to beat the in-stock advertised price of all competitors by 5%</li>
+            <li tabindex="0">✔ Same day delivery!</li>
+        </ul>
+    </section>
+    <br tabindex="0">
+    <br tabindex="0">
+    <br tabindex="0">
+    <!-- Footer with copyright and social media links -->
+    <footer tabindex="0">
+        <b tabindex="0">
+            <p tabindex="0">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <p tabindex="0">Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="0">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="0">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="0">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="0">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="0">Tiktok</a>
+            </p>
+        </b>
+    </footer>
 </body>
 </html>

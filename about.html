@@ -9,99 +9,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        h1 {
-            text-align: center;
-            font-size: 1.8rem;
-        }
-        h2 {
-            text-align: center;
-            font-size: 1.4rem;
-        }
-        .center-content {
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        #surplusfurniture-heading {
-            font-size: 2.4rem;
-        }
-        </style>
-        <script>
-  function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
-}
-</script>
+        body { padding: 0; margin: 0; }
+        .center-content {animation: fadeIn 2s ease-in-out;}
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 
+    </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menuLinks").classList.toggle("show");
+        }
+    </script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="left-menu">
-                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-                <div class="menu-links" id="menuLinks">
-                <a href="living-room.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
-                <a href="dinettes.html">DINETTES</a>
-                <a href="home-decor.html">HOME DECOR</a>
+        <nav class="navbar" tabindex="1">
+            <div class="left-menu" tabindex="2">
+                <button class="menu-icon" onclick="toggleMenu()" tabindex="3">&#9776;</button>
+                <div class="menu-links" id="menuLinks" tabindex="4">
+                    <a href="living-room.html" tabindex="5">LIVING ROOM</a>
+                    <a href="bedroom.html" tabindex="6">BEDROOM</a>
+                    <a href="dinettes.html" tabindex="7">DINETTES</a>
+                    <a href="home-decor.html" tabindex="8">HOME DECOR</a>
                 </div>
-                <a href="contact.html">CONTACT US</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="index.html">HOME</a>
+                <a href="contact.html" tabindex="9">CONTACT US</a>
+                <a href="about.html" tabindex="10">ABOUT US</a>
+                <a href="index.html" tabindex="11">HOME</a>
+                <h1 class="surplusfurniture" tabindex="12">Surplus Furniture</h1>
             </div>
-            <div class="right-menu">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
-                <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+            <div class="right-menu" tabindex="13">
+                <span class="icon" tabindex="14">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="15">
+                </span>
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="16" />
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="17">🛒</span>
             </div>
         </nav>
     </header>
-<section class="center-content">
-    <i><b><h1>About Us</h1></b></i>
-</section>
-<section class="center-content">
-        <p>Surplus Furniture and Mattress Warehouse opened its doors to the public in 2002 with 5 strategically placed locations across Canada, planting roots in Calgary, Edmonton, Winnipeg, Ottawa, and St. John’s.</p>
-        <p>Surplus Furniture quickly became a top furniture and mattress retailer with the buying power to provide incredible value at a warehouse price! Our concept is simple; use a low overhead warehouse and offer quality brand name furniture and mattresses, purchased direct from the factory at deep discounts and pass the savings on to the customers. This strategy has provided customers with sofas, loveseats, sectionals, motion furniture, recliners, coffee tables, lamps, TV stands, area rugs, bedrooms, mattresses, dinettes, bunk beds, accent furniture and much more at unbeatable low prices.
-</p>
-<p>With this strong focus, along with great customer service and Same Day Delivery, the dedicated employees of Surplus Furniture and Mattress Warehouse set their sights on growth. Surplus Furniture began to expand to other provinces with locations in New Brunswick, Nova Scotia, PEI and Saskatchewan while continuing to add locations in Alberta, Manitoba, Ontario and Newfoundland.
-</p>
-</section>
-<section class="center-content">
-    <i>
-    <b>
-        <u>
-        <h1 id="surplusfurniture-heading">Surplus Furniture Today</h1>
-        </u>
-    </b>
-    </i>
-</section>
-<section class="center-content">
-    <p>Today Surplus Furniture has grown to 33 locations across the country and we continue to actively search for new locations to bring the best value on furniture and mattresses to every marketplace. We continue to focus on a simple warehouse concept with no fancy displays, carpets or lighting and still offer unique features like Same Day Delivery on all in-stock furniture. All while providing flexible payment options like 100% Free Layaway, on-the-spot-financing with No Interest, No Payments for 1-Year (OAC) or simply using the standard methods of payment.
-</p>
-</section>
-<section class="center-content">
-    <p>You will also not find a competitor that can match our prices! We are so confident in our prices that we guarantee it with our <span style="font-weight: bold;">iSave Best Price Guarantee!</span> We will always beat the valid in-stock and advertised price of all local competitors.
-</p>
-<p><span style="font-weight: bold;"> With over 30 years experience</span> in the industry, our furniture experts continue to negotiate special volume discounts in order to secure the lowest price possible on quality brand name furniture for our customers. We are proud that we have been saving consumers money since our inception.
-</p>
-</section>
-<footer>
-    <b><p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
-    <p>Follow us on social media: 
-        <a href="https://www.facebook.com/surplusfurniture" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank">Instagram</a> | 
-        <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank">Youtube</a> |
-        <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank">Pinterest</a> |
-        <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank">Tiktok</a>
-    </p>
-    </b>
-</footer>
+    <section class="center-content" tabindex="18">
+        <i><b><h1 tabindex="19">About Us</h1></b></i>
+    </section>
+    <section class="center-content" tabindex="20">
+        <p tabindex="21">Surplus Furniture and Mattress Warehouse opened its doors to the public in 2002 with 5 strategically placed locations across Canada, planting roots in Calgary, Edmonton, Winnipeg, Ottawa, and St. John’s.</p>
+        <p tabindex="22">Surplus Furniture quickly became a top furniture and mattress retailer with the buying power to provide incredible value at a warehouse price! Our concept is simple; use a low overhead warehouse and offer quality brand name furniture and mattresses, purchased direct from the factory at deep discounts and pass the savings on to the customers. This strategy has provided customers with sofas, loveseats, sectionals, motion furniture, recliners, coffee tables, lamps, TV stands, area rugs, bedrooms, mattresses, dinettes, bunk beds, accent furniture and much more at unbeatable low prices.
+        </p>
+        <p tabindex="23">With this strong focus, along with great customer service and Same Day Delivery, the dedicated employees of Surplus Furniture and Mattress Warehouse set their sights on growth. Surplus Furniture began to expand to other provinces with locations in New Brunswick, Nova Scotia, PEI and Saskatchewan while continuing to add locations in Alberta, Manitoba, Ontario and Newfoundland.
+        </p>
+    </section>
+    <section class="center-content" tabindex="24">
+        <i>
+            <b>
+                <u>
+                    <h1 id="surplusfurniture-heading" tabindex="25">Surplus Furniture Today</h1>
+                </u>
+            </b>
+        </i>
+    </section>
+    <section class="center-content" tabindex="26">
+        <p tabindex="27">Today Surplus Furniture has grown to 33 locations across the country and we continue to actively search for new locations to bring the best value on furniture and mattresses to every marketplace. We continue to focus on a simple warehouse concept with no fancy displays, carpets or lighting and still offer unique features like Same Day Delivery on all in-stock furniture. All while providing flexible payment options like 100% Free Layaway, on-the-spot-financing with No Interest, No Payments for 1-Year (OAC) or simply using the standard methods of payment.
+        </p>
+    </section>
+    <section class="center-content" tabindex="28">
+        <p tabindex="29">You will also not find a competitor that can match our prices! We are so confident in our prices that we guarantee it with our <span style="font-weight: bold;">iSave Best Price Guarantee!</span> We will always beat the valid in-stock and advertised price of all local competitors.
+        </p>
+        <p tabindex="30"><span style="font-weight: bold;"> With over 30 years experience</span> in the industry, our furniture experts continue to negotiate special volume discounts in order to secure the lowest price possible on quality brand name furniture for our customers. We are proud that we have been saving consumers money since our inception.
+        </p>
+    </section>
+    <footer tabindex="31">
+        <b>
+            <p tabindex="32">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <p tabindex="33">Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="34">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="35">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="36">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="37">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="38">Tiktok</a>
+            </p>
+        </b>
+    </footer>
 </body>
+</html>
