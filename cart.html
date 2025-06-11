@@ -8,14 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> <!-- Archivo Black font import -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
         function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
-}
-document.getElementById("cart-icon").onclick =function () {
-    window.location.href ="cart.html";
-};
+            document.getElementById("menuLinks").classList.toggle("show");
+        }
+        // Redirects to cart page when cart icon is clicked
+        document.getElementById("cart-icon").onclick =function () {
+            window.location.href ="cart.html";
+        };
+        // Redirects to home page when logo is clicked
+        document.getElementById("logo").onclick =function () {
+            window.location.href ="index.html";
+        }
     </script>
     <style>
         .center-content {animation: fadeIn 2s ease-in-out;}
@@ -31,70 +36,71 @@ document.getElementById("cart-icon").onclick =function () {
         #cart-image {
             margin-left: 550px;
         }
-        
-
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
+                <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
                 <div class="menu-links" id="menuLinks">
-                <a href="living-room.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
-                <a href="dinettes.html">DINETTES</a>
-                <a href="home-decor.html">HOME DECOR</a>
+                    <a href="living-room.html" tabindex="3">LIVING ROOM</a>
+                    <a href="bedroom.html" tabindex="4">BEDROOM</a>
+                    <a href="dinettes.html" tabindex="5">DINETTES</a>
+                    <a href="home-decor.html" tabindex="6">HOME DECOR</a>
                 </div>
-                <a href="contact.html">CONTACT US</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="index.html">HOME</a>
-                <h1 class="surplusfurniture" tabindex="0">Surplus Furniture</h1>
+                <a href="contact.html" tabindex="7">CONTACT US</a>
+                <a href="about.html" tabindex="8">ABOUT US</a>
+                <a href="index.html" tabindex="9">HOME</a>
+                <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            
             <div class="right-menu">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
-                <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+                <span class="icon">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="10" onclick="window.location.href='index.html'">
+                </span>
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="11" />
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="12" role="button" aria-label="Cart">🛒</span>
             </div>
         </nav>
     </header>
     <main>
         <section class="center-content">
-        <h1>Your Cart</h1>
-        <b><h2>Uh oh. Looks like your cart is empty...</h2></b>
-        <h2>Don't know where to start?</h2>
+            <h1 tabindex="13">Your Cart</h1>
+            <b><h2 tabindex="14">Uh oh. Looks like your cart is empty...</h2></b>
+            <h2 tabindex="15">Don't know where to start?</h2>
+            <h2 tabindex="16">Check out our furniture categories below!</h2>
         </section>
         <br>
         <div class="image-row">
-<div class="img-col">
-    <img src="images/bed1.jpg" alt="picture of a light brown wood bed">
-    <a href="bedroom.html" class="img-btn">Bedroom-Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/bed.jpg" alt="image of a dark brown wood bed">
-    <a href="bedroom.html" class="img-btn"> Bedroom-Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair">
-    <a href="living-room.html" class="img-btn"> Living-Room Furniture</a>
-  </div>
-  <div class="img-col">
-    <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs">
-    <a href="living-room.html" class="img-btn">Dinettes</a>
-  </div>
-</div>
+            <div class="img-col">
+                <img src="images/bed1.jpg" alt="picture of a light brown wood bed">
+                <a href="bedroom.html" class="img-btn" tabindex="17">Bedroom-Furniture</a>
+            </div>
+            <div class="img-col">
+                <img src="images/bed.jpg" alt="image of a dark brown wood bed">
+                <a href="bedroom.html" class="img-btn" tabindex="18">Bedroom-Furniture</a>
+            </div>
+            <div class="img-col">
+                <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair">
+                <a href="living-room.html" class="img-btn" tabindex="19">Living-Room Furniture</a>
+            </div>
+            <div class="img-col">
+                <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs">
+                <a href="living-room.html" class="img-btn" tabindex="20">Dinettes</a>
+            </div>
+        </div>
     </main>
     <footer>
-    <b><p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
-    <p>Follow us on social media: 
-        <a href="https://www.facebook.com/surplusfurniture" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank">Instagram</a> | 
-        <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank">Youtube</a> |
-        <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank">Pinterest</a> |
-        <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank">Tiktok</a>
-    </p>
-    </b>
-</footer>
+        <b>
+            <p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <p>Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="21">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="22">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="23">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="24">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="25">Tiktok</a>
+            </p>
+        </b>
+    </footer>
 </body>
 </html>

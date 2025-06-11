@@ -1,66 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Sets the language of the document to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedroom Furniture</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Sets the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on all devices -->
+    <title>Bedroom Furniture</title> <!-- Sets the page title shown in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to external CSS file for styling -->
+    <!-- Preconnects to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the 'Archivo Black' font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
+        // Toggles the visibility of the navigation menu on small screens
         function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
+            document.getElementById("menuLinks").classList.toggle("show");
+        }
+        // Redirects to cart page when cart icon is clicked
+        document.getElementById("cart-icon").onclick =function () {
+            window.location.href ="cart.html";
+        };
+        // Redirects to home page when logo is clicked
+        document.getElementById("logo").onclick =function () {
+            window.location.href ="index.html";
         }
     </script>
+    <style>
+        /* Styles for all h1 elements: font, alignment, and text shadow */
+        h1 {
+            font-family: 'Archivo Black', sans-serif;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
+    <!-- Header section containing the navigation bar -->
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
+                <!-- Hamburger menu icon for mobile navigation -->
+                <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
+                <!-- Collapsible menu links for navigation -->
                 <div class="menu-links" id="menuLinks">
-                <a href="living-room.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
-                <a href="dinettes.html">DINETTES</a>
-                <a href="home-decor.html">HOME DECOR</a>
+                    <a href="living-room.html" tabindex="3">LIVING ROOM</a>
+                    <a href="bedroom.html" tabindex="4">BEDROOM</a>
+                    <a href="dinettes.html" tabindex="5">DINETTES</a>
+                    <a href="home-decor.html" tabindex="6">HOME DECOR</a>
                 </div>
-                <a href="contact.html">CONTACT US</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="index.html">HOME</a>
-                <h1 class="surplusfurniture">Surplus Furniture</h1>
+                <!-- Additional navigation links -->
+                <a href="contact.html" tabindex="7">CONTACT US</a>
+                <a href="about.html" tabindex="8">ABOUT US</a>
+                <a href="index.html" tabindex="9">HOME</a>
+                <!-- Website title/logo -->
+                <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
             <div class="right-menu">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo"></span>
-                <input type="text" placeholder="Search..." class="search-bar" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
+                <!-- Company logo image -->
+                <span class="icon" tabindex="10" id="logo" onclick="window.location.href='index.html'">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo">
+                </span>
+                <!-- Search bar for product search -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="11" />
+                <!-- Shopping cart icon, redirects to cart page on click -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="12">🛒</span>
             </div>
         </nav>
     </header>
+    <!-- Main heading for the bedroom furniture page -->
+    <section class="center-content">
+        <h1 tabindex="13">Bedroom Furniture</h1>
+    </section>
+    <!-- Description section for bedroom furniture -->
+    <section class="center-content">
+        <p tabindex="14">
+            Explore our exquisite collection of bedroom furniture, designed to transform your space into a sanctuary of comfort and style. From elegant beds to chic nightstands, we have everything you need to create your dream bedroom.
+        </p>
+        <p tabindex="15">
+            Our selection features a variety of styles, materials, and colors to suit every taste and budget. Whether you prefer modern minimalism or classic elegance, you'll find the perfect pieces to complement your decor.
+        </p>
+        <p tabindex="16">
+            Shop now and discover the perfect furniture to enhance your bedroom's ambiance and functionality.
+        </p>
+    </section>
+    <br>
+    <!-- First gallery row: displays bedroom furniture images with captions -->
     <div class="gallery">
-    <div class="gallery-item">
-        <img src="images/bed.jpg" alt="Dark brown dark wood bed with a night table">
-        <div class="caption">
-            Cocoa root
+        <div class="gallery-item" tabindex="17">
+            <img src="images/bed.jpg" alt="Dark brown dark wood bed with a night table">
+            <div class="caption">Cocoa root</div>
+        </div>
+        <div class="gallery-item" tabindex="18">
+            <img src="images/bed1.jpg" alt="light brown wood bed with a night table">
+            <div class="caption">Maple snug</div>
+        </div>
+        <div class="gallery-item" tabindex="19">
+            <img src="images/bedroom furniture image.jpg" alt="white bed with a night table on the side">
+            <div class="caption">White elegance</div>
+        </div>
+        <div class="gallery-item" tabindex="20">
+            <img src="images/bed2.jpg" alt="khaki green bed with a brown wood night table on the side">
+            <div class="caption">divine elegance</div>
+        </div>
+        <div class="gallery-item" tabindex="21">
+            <img src="images/bed3.jpg" alt="A orange and white bed with a white night table on the side and a white chair in front of the bed.">
+            <div class="caption">Citrus delight</div>
         </div>
     </div>
-    <div class="gallery-item">
-        <img src="images/bed1.jpg" alt="light brown wood bed with a night table">
-        <div class="caption">
-            Maple snug
+    <!-- Second gallery row: more bedroom furniture images with captions -->
+    <div class="gallery">
+        <div class="gallery-item" tabindex="22">
+            <img src="images/bed4.jpg" alt="A royal blue bed with gold accents and a comfy grey footboard bench in front of the bed.">
+            <div class="caption">Royal excellence</div>
         </div>
+        <div class="gallery-item" tabindex="23">
+            <img src="images/bed5.jpg" alt="A modern red bed with a white night table on the side and a red footboard bench in front of the bed.">
+            <div class="caption">Modern Cherry</div>
         </div>
-    <div class="gallery-item">
-        <img src="images/bedroom furniture image.jpg" alt="white bed with a night table on the side">
-        <div class="caption">
-            White elegance
+        <div class="gallery-item" tabindex="24">
+            <img src="images/bed6.jpg" alt="A modern grey bed with a white night table on the side and a grey footboard bench in front of the bed.">
+            <div class="caption">Modern Grey</div>
+        </div>
+        <div class="gallery-item" tabindex="25">
+            <img src="images/bed7.jpg" alt="A modern black bed with a black night table on the side and a black footboard bench in front of the bed.">
+            <div class="caption">Modern Black</div>
+        </div>
+        <div class="gallery-item" tabindex="26">
+            <img src="images/bed8.jpg" alt="A lavender purple bed with a white night table on the side and a purple armchair in front of the bed.">
+            <div class="caption">Lavender Dream</div>
         </div>
     </div>
-    <div class="gallery-item">
-        <img src="images/bed2.jpg" alt="white bed with a night table on the side">
-        <div class="caption">
-            divine elegance
+    <!-- Third gallery row: additional bedroom furniture images with captions -->
+    <div class="gallery">
+        <div class="gallery-item" tabindex="27">
+            <img src="images/bed9.jpg" alt="A white and yellow bed with a white night table on the side.">
+            <div class="caption">Fresh Lemon</div>
+        </div>
+        <div class="gallery-item" tabindex="28">
+            <img src="images/bed10.jpg" alt="A royal cyan bed with gold accents and a gold and cyan night table on the side.">
+            <div class="caption">Royal Cyan</div>
+        </div>
+        <div class="gallery-item" tabindex="29">
+            <img src="images/bed11.jpg" alt="A modern brown bed with a brown night table on the side and a brown footboard bench in front of the bed.">
+            <div class="caption">Modern Brown</div>
+        </div>
+        <div class="gallery-item" tabindex="30">
+            <img src="images/bed12.jpg" alt="A modern comfy rose pink bed with a brown wood night table on the side.">
+            <div class="caption">Blissful elegance</div>
+        </div>
     </div>
-    </div>
+    <br>
+    <br>
+    <!-- Footer section with copyright and social media links -->
+    <footer>
+        <p tabindex="31">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+        <p tabindex="32">
+            Follow us on social media: 
+            <!-- Social media links open in new tabs -->
+            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="33">Facebook</a> | 
+            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="34">Instagram</a> | 
+            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="35">Youtube</a> |
+            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="36">Pinterest</a> |
+            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="37">Tiktok</a>
+        </p>
+    </footer>
 </body>
 </html>

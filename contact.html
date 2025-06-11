@@ -17,6 +17,14 @@
     function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
     }
+    // Redirects to cart page when cart icon is clicked
+        document.getElementById("cart-icon").onclick =function () {
+            window.location.href ="cart.html";
+        };
+        // Redirects to home page when logo is clicked
+        document.getElementById("logo").onclick =function () {
+            window.location.href ="index.html";
+        }
   </script>
   <style>
     /* Basic body reset */
@@ -200,7 +208,7 @@
       </div>
       <div class="right-menu">
         <!-- Company logo image -->
-        <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="11"></span>
+        <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="11" onclick="window.location.href='index.html'"></span>
         <!-- Search bar -->
         <input type="text" placeholder="Search..." class="search-bar" tabindex="12" />
         <!-- Cart icon button -->
