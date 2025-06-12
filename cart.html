@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts preconnect and font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
+        // Toggles the visibility of the menu links for mobile navigation
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
@@ -23,16 +26,19 @@
         }
     </script>
     <style>
+        /* Fade-in animation for main content */
         .center-content {animation: fadeIn 2s ease-in-out;}
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
         }
+        /* Logo styling */
         #logo {
             justify-content: center;
             align-items: center;
             margin-left: 20px;
         }
+        /* Cart image margin */
         #cart-image {
             margin-left: 550px;
         }
@@ -40,30 +46,39 @@
 </head>
 <body>
     <header>
+        <!-- Navigation bar -->
         <nav class="navbar">
             <div class="left-menu">
+                <!-- Hamburger menu icon for mobile -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
+                <!-- Collapsible menu links -->
                 <div class="menu-links" id="menuLinks">
                     <a href="living-room.html" tabindex="3">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="4">BEDROOM</a>
                     <a href="dinettes.html" tabindex="5">DINETTES</a>
                     <a href="homedecor.html" tabindex="6">HOME DECOR</a>
                 </div>
+                <!-- Additional navigation links -->
                 <a href="contact.html" tabindex="7">CONTACT US</a>
                 <a href="about.html" tabindex="8">ABOUT US</a>
                 <a href="index.html" tabindex="9">HOME</a>
+                <!-- Website title -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
             <div class="right-menu">
+                <!-- Company logo (clickable) -->
                 <span class="icon">
                     <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="10" onclick="window.location.href='index.html'">
                 </span>
+                <!-- Search bar -->
                 <input type="text" placeholder="Search..." class="search-bar" tabindex="11" />
+                <!-- Cart icon (clickable) -->
                 <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="12" role="button" aria-label="Cart">🛒</span>
             </div>
         </nav>
     </header>
     <main>
+        <!-- Main cart content -->
         <section class="center-content">
             <h1 tabindex="13">Your Cart</h1>
             <b><h2 tabindex="14">Uh oh. Looks like your cart is empty...</h2></b>
@@ -71,26 +86,28 @@
             <h2 tabindex="16">Check out our furniture categories below!</h2>
         </section>
         <br>
-        <div class="image-row">
-            <div class="img-col">
-                <img src="images/bed1.jpg" alt="picture of a light brown wood bed">
-                <a href="bedroom.html" class="img-btn" tabindex="17">Bedroom-Furniture</a>
+        <!-- Category image links -->
+        <div class="image-row" tabindex="0">
+            <div class="img-col" tabindex="0">
+                <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="0">
+                <a href="bedroom.html" class="img-btn" tabindex="0" id="bedroom">Bedroom-Furniture</a>
             </div>
-            <div class="img-col">
-                <img src="images/bed.jpg" alt="image of a dark brown wood bed">
-                <a href="bedroom.html" class="img-btn" tabindex="18">Bedroom-Furniture</a>
+            <div class="img-col" tabindex="0">
+                <img src="images/decor5.jpg" alt="image of " tabindex="0">
+                <a href="homedecor.html" class="img-btn" tabindex="0"> Home-Decor</a>
             </div>
-            <div class="img-col">
-                <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair">
-                <a href="living-room.html" class="img-btn" tabindex="19">Living-Room Furniture</a>
+            <div class="img-col" tabindex="0">
+                <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="0">
+                <a href="living-room.html" class="img-btn" tabindex="0" id="living-room"> Living-Room Furniture</a>
             </div>
-            <div class="img-col">
-                <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs">
-                <a href="living-room.html" class="img-btn" tabindex="20">Dinettes</a>
+            <div class="img-col" tabindex="0">
+                <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="0">
+                <a href="dinettes.html" class="img-btn" tabindex="0" id="dinettes">Dinettes</a>
             </div>
         </div>
     </main>
     <footer>
+        <!-- Footer with copyright and social media links -->
         <b>
             <p>&copy; 2025 Surplus Furniture. All rights reserved.</p>
             <p>Follow us on social media: 

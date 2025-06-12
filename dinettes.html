@@ -4,60 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinettes</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts preconnect and font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
+        // Toggles the visibility of the navigation menu on small screens
         function toggleMenu() {
-    document.getElementById("menuLinks").classList.toggle("show");
+            document.getElementById("menuLinks").classList.toggle("show");
         }
         // Redirects to cart page when cart icon is clicked
-        document.getElementById("cart-icon").onclick =function () {
-            window.location.href ="cart.html";
+        document.getElementById("cart-icon").onclick = function () {
+            window.location.href = "cart.html";
         };
         // Redirects to home page when logo is clicked
-        document.getElementById("logo").onclick =function () {
-            window.location.href ="index.html";
+        document.getElementById("logo").onclick = function () {
+            window.location.href = "index.html";
         }
     </script>
     <style>
-        h1 {font-family: "Archivo Black", sans-serif;
-    text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);}
+        /* Style for main heading */
+        h1 {
+            font-family: "Archivo Black", sans-serif;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body>
     <header>
+        <!-- Navigation bar -->
         <nav class="navbar">
             <div class="left-menu">
+                <!-- Hamburger menu icon for mobile navigation -->
                 <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
+                <!-- Collapsible menu links -->
                 <div class="menu-links" id="menuLinks">
-                <a href="living-room.html">LIVING ROOM</a>
-                <a href="bedroom.html">BEDROOM</a>
-                <a href="dinettes.html">DINETTES</a>
-                <a href="homedecor.html">HOME DECOR</a>
+                    <a href="living-room.html">LIVING ROOM</a>
+                    <a href="bedroom.html">BEDROOM</a>
+                    <a href="dinettes.html">DINETTES</a>
+                    <a href="homedecor.html">HOME DECOR</a>
                 </div>
+                <!-- Additional navigation links -->
                 <a href="contact.html">CONTACT US</a>
                 <a href="about.html">ABOUT US</a>
                 <a href="index.html">HOME</a>
+                <!-- Website title -->
                 <h1 class="surplusfurniture">Surplus Furniture</h1>
             </div>
             <div class="right-menu">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'"></span>
+                <!-- Company logo (clickable) -->
+                <span class="icon">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'">
+                </span>
+                <!-- Search bar -->
                 <input type="text" placeholder="Search..." class="search-bar" />
+                <!-- Cart icon (clickable) -->
                 <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'">🛒</span>
             </div>
         </nav>
     </header>
+    <!-- Main heading for the page -->
     <section class="center-content">
         <h1>Dinettes</h1>
     </section>
+    <!-- Description section for dinettes -->
     <section class="center-content">
         <p>Explore our finest dinettes crafted to transform your space into a warm, inviting area where style meets function. Whether you're looking for a cozy two-seater for casual breakfasts or a spacious set for family dinners, our collection offers a variety of designs to suit any home. </p>
         <p>From modern minimalist styles to classic wooden finishes, each piece is designed with quality and comfort in mind. Enjoy meals with loved ones around our beautifully crafted dinettes that not only enhance your dining experience but also add a touch of elegance to your home decor.</p>
         <p>Explore our finest dinettes crafted to transform your space into a warm, inviting area where style meets function. Whether you're looking for a cozy two-seater for casual breakfasts or a spacious set for family dinners, our collection offers a variety of designs to suit any home.</p>
         <p>Discover the perfect dinette that complements your lifestyle and brings people together. Browse our selection today and find the ideal piece to elevate your dining area.</p>
     </section>
+    <!-- Gallery of dinette images (first row) -->
     <div class="gallery">
         <div class="gallery-item">
             <img src="images/dinette.jpg" alt="An image of a dark brown dinette with a bold design" />
@@ -70,20 +90,21 @@
             <div class="caption">
                 <p>Bliss</p>
             </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/dinette3.jpg" alt="an image of a modern grey dinette with 7 grey chairs" />
+            <div class="caption">
+                <p>Haven</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/dinette3.jpg" alt="an image of a modern grey dinette with 7 grey chairs" />
-                <div class="caption">
-                    <p>Haven</p>
-                </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/dinette4.jpg" alt="an image of a unique-looking light brown dinette with 6 light brown chairs surrounding it" />
+            <div class="caption">
+                <p>Hearthy</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/dinette4.jpg" alt="an image of a unique-looking light brown dinette with 6 light brown chairs surrounding it" />
-                <div class="caption">
-                    <p>Hearthy</p>
-                </div>
-            </div>
+        </div>
     </div>
+    <!-- Gallery of dinette images (second row) -->
     <div class="gallery">
         <div class="gallery-item">
             <img src="images/dinette5.jpg" alt="an image of a modern-looking white dinette with 4 light brown chairs" />
@@ -96,26 +117,27 @@
             <div class="caption">
                 <p>Elegance</p>
             </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/dinette7.jpg" alt="an image of a modern-looking teal dinette with 4 white chairs" />
+            <div class="caption">
+                <p>Tranquility</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/dinette7.jpg" alt="an image of a modern-looking teal dinette with 4 white chairs" />
-                <div class="caption">
-                    <p>Tranquility</p>
-                </div>
-                </div>
+        </div>
         <div class="gallery-item">
             <img src="images/dinette8.jpg" alt="an image of a unique-looking white and red color dinette with 6 white chairs" />
             <div class="caption">
                 <p>Cherry Frost</p>
-                </div>
             </div>
+        </div>
         <div class="gallery-item">
             <img src="images/dinette9.jpg" alt="an image of a modern-looking blue and white dinette with 4 white and blue chairs" />
             <div class="caption">
                 <p>Midnight</p>
             </div>
+        </div>
     </div>
-    </div>
+    <!-- Gallery of dinette images (third row) -->
     <div class="gallery">
         <div class="gallery-item">
             <img src="images/dinette10.jpg" alt="an image of a modern green table with 6 green chairs" />
@@ -141,7 +163,21 @@
                 <p>Autumn Set</p>
             </div>
         </div>
-
     </div>
+    <br>
+    <br>
+    <footer>
+        <!-- Copyright and attribution -->
+        <p tabindex="31">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+        <p tabindex="33">The first image is from surplus furniture, the rest of the images are generated by AI</p>
+        <!-- Social media links (open in new tabs) -->
+        <p>Follow us on social media: 
+            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="33">Facebook</a> | 
+            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="34">Instagram</a> | 
+            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="35">Youtube</a> |
+            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="36">Pinterest</a> |
+            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="37">Tiktok</a>
+        </p>
+    </footer>
 </body>
 </html>

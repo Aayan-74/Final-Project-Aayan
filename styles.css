@@ -1,47 +1,90 @@
+/* ====== Base Styles ====== */
 body {
-  font-size: 62.5%;
+  font-size: 62.5%; /* Sets base font size for rem units */
   line-height: 1.6rem;
   word-spacing: 1px;
   letter-spacing: 1px;
   text-indent: 1px;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Not effective on body, used for flex containers */
+  align-items: center;     /* Not effective on body, used for flex containers */
   font-family: "Open Sans", sans-serif;
   background-color: burlywood;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
+
 p {
   text-align: center;
   font-size: 1.2rem;
 }
-header {background-color: burlywood; padding: 1rem; margin-bottom: 2rem; width: 95%;}
 
-ul {list-style: none; padding: 0; margin: 0; font-weight: bold;}
+/* ====== Header Styles ====== */
+header {
+  background-color: burlywood;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 95%;
+}
 
-ul li {background-color: burlywood; text-align: center; font-size: 1.2rem;}
+/* ====== List and Navigation Styles ====== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
 
-ul li a {text-decoration: none; color: black; padding: 1rem 1rem; display: inline;}
+ul li {
+  background-color: burlywood;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-ul li a:hover {background-color: darkgoldenrod; color: white;}
-
-ul li a.active {background-color: darkgoldenrod; color: white;}
-
-button {background-color: burlywood;
+ul li a {
+  text-decoration: none;
   color: black;
-  border: none; 
-  padding: 0.7rem 1rem; 
-  cursor: pointer; 
+  padding: 1rem 1rem;
+  display: inline;
+}
+
+/* Highlight nav links on hover and when active */
+ul li a:hover,
+ul li a.active {
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+/* ====== Button Styles ====== */
+button {
+  background-color: burlywood;
+  color: black;
+  border: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
   border-radius: 10px;
   font-family: "Open Sans", sans-serif;
-font-weight: bold;}
+  font-weight: bold;
+}
 
-button:hover {background-color: antiquewhite; color: brown; font-weight: bold;}
-/* Navbar styles */
-h1 {text-align: center; font-size: 1.6rem;}
-        h2 {text-align: center; font-size: 1.4rem;}
+button:hover {
+  background-color: antiquewhite;
+  color: brown;
+  font-weight: bold;
+}
 
+/* ====== Headings ====== */
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* ====== Navbar Styles ====== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -49,6 +92,7 @@ h1 {text-align: center; font-size: 1.6rem;}
   padding: 15px 30px;
   background-color: #f9f2ec;
 }
+
 .left-menu {
   display: flex;
   align-items: center;
@@ -67,16 +111,19 @@ h1 {text-align: center; font-size: 1.6rem;}
   color: #3a2a1d;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
-  padding: 6px 12px; /* Gives padding like a button */
+  padding: 6px 12px; /* Button-like padding */
   border-radius: 20px;
   transition: background-color 0.3s, color 0.3s;
 }
+
+/* Hover effect for left menu links */
 .left-menu a:hover {
-  background-color: #e4d5c3; /* Soft beige-brown background */
-  color: #000; /* Darker text on hover */
+  background-color: #e4d5c3;
+  color: #000;
   cursor: pointer;
-  padding: 5px, 10px; /* Slightly smaller padding on hover */
+  padding: 5px, 10px; /* Slightly smaller padding on hover (note: comma should be space) */
 }
+
 .right-menu {
   display: flex;
   align-items: center;
@@ -88,6 +135,7 @@ h1 {text-align: center; font-size: 1.6rem;}
   cursor: pointer;
 }
 
+/* ====== Search Bar Styles ====== */
 .search-bar {
   padding: 6px 12px;
   border-radius: 20px;
@@ -95,26 +143,23 @@ h1 {text-align: center; font-size: 1.6rem;}
   outline: none;
   margin-left: 15px;
   align-items: center;
-  
 }
 
-
-/* Hero Section with background image */
+/* ====== Hero Section with Background Image ====== */
 .hero-section {
   position: relative;
   height: 40rem;
   width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('images/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Text on top of background */
+/* ====== Overlay Text on Hero Section ====== */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -128,43 +173,52 @@ h1 {text-align: center; font-size: 1.6rem;}
   font-size: 48px;
   font-weight: 800;
   margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-family: "Archivo Black", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Archivo Black", sans-serif;
 }
 
 .overlay-text h2 {
   margin-top: 10px;
   letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans", sans-serif;
 }
 
-.center-content {padding: 2rem;
-max-width: 80rem;
-margin: 2rem auto;
-background-color: #f9f2ec;
-border-radius: 0.5rem;
-box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-justify-content: center;
-align-self: center;
-animation: fade In, 2s, ease-in-out;}
+/* ====== Centered Content Container ====== */
+.center-content {
+  padding: 2rem;
+  max-width: 80rem;
+  margin: 2rem auto;
+  background-color: #f9f2ec;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-self: center;
+  animation: fade In, 2s, ease-in-out; /* Typo: should be fadeIn 2s ease-in-out */
+}
 
+/* ====== Fade-in Animation Keyframes ====== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* ====== Navigation Link Styles ====== */
 .nav-link {
   padding: 8px 12px;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   text-decoration: solid;
 }
+
 .nav-link:hover {
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #000000; /* optional: outlines like a button */
+  border: 1px solid #000000; /* Optional: outlines like a button */
 }
+
+/* ====== Footer Styles ====== */
 footer {
   background-color: #3a2a1d;
   padding: 10px;
@@ -179,7 +233,23 @@ footer {
   bottom: 0;
   /* Removed position: fixed and bottom: 0 to prevent overlap */
 }
-footer p { text-align: center; font-size: 1.2rem; color: burlywood; margin-top: 20px; }
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: burlywood;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* ====== Global Anchor Styles ====== */
 a {
   color: white;
   text-decoration: none;
@@ -187,51 +257,57 @@ a {
   transition: color 0.3s;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-
 }
+
 a:hover {
   color: burlywood; /* Darker color on hover */
 }
+
+/* ====== Dropdown Menu Styles ====== */
 .menu-links {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(93, 25, 25);
-    padding: 1rem;
-    position: absolute;
-    top: 3.5rem;
-    left: 1rem;
-    z-index: 999;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    
-    /* Animation properties */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transform: translateY(-10px);
-    transition: 
-        max-height 0.3s ease-in-out,
-        opacity 0.3s ease-in-out,
-        transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(93, 25, 25);
+  padding: 1rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  z-index: 999;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+  /* Animation properties */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
+/* Show dropdown menu */
 .menu-links.show {
-    max-height: 500px; /* Adjust based on your content */
-    opacity: 1;
-    transform: translateY(0);
+  max-height: 500px; /* Adjust based on your content */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-links a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out 0.2s;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.2s;
 }
 
+/* Fade in links when menu is shown */
 .menu-links.show a {
-    opacity: 1;
+  opacity: 1;
 }
+
+/* ====== Image Row Styles ====== */
 .image-row {
   display: flex;
   justify-content: space-between;
@@ -248,15 +324,10 @@ a:hover {
   animation: fadeIn 1s ease forwards;
 }
 
-.img-col:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.img-col:nth-child(2) {
-  animation-delay: 0.5s;
-}
-.img-col:nth-child(3) {
-  animation-delay: 0.8s;
-}
+/* Staggered animation delays for columns */
+.img-col:nth-child(1) { animation-delay: 0.2s; }
+.img-col:nth-child(2) { animation-delay: 0.5s; }
+.img-col:nth-child(3) { animation-delay: 0.8s; }
 
 .img-col img {
   width: 100%;
@@ -265,11 +336,12 @@ a:hover {
   transition: transform 0.5s ease;
 }
 
+/* Slight zoom on hover */
 .img-col:hover img {
   transform: scale(1.05);
 }
 
-/* Button styles */
+/* ====== Button Overlay on Images ====== */
 .img-btn {
   position: absolute;
   bottom: 15px;
@@ -291,7 +363,7 @@ a:hover {
   transform: translateX(-50%) scale(1.05);
 }
 
-/* Fade-in animation */
+/* ====== Fade-in Animation for Images ====== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -303,7 +375,7 @@ a:hover {
   }
 }
 
-/* Responsive: Stack on small screens */
+/* ====== Responsive Styles for Small Screens ====== */
 @media (max-width: 768px) {
   .image-row {
     flex-direction: column;
@@ -318,13 +390,17 @@ a:hover {
     font-size: 14px;
   }
 }
+
+/* ====== Surplus Furniture Heading ====== */
 .surplusfurniture {
-            margin-left: 200px;
-            font-family: "Archivo Black", sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-        }
-        .gallery {
+  margin-left: 200px;
+  font-family: "Archivo Black", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* ====== Gallery Grid Styles ====== */
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
@@ -336,7 +412,6 @@ a:hover {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
 }
 
 .gallery-item img {
@@ -346,9 +421,12 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
+/* Slight zoom on gallery item hover */
 .gallery-item:hover img {
   transform: scale(1.05);
 }
+
+/* ====== Caption Overlay on Gallery Items ====== */
 .caption {
   position: absolute;
   bottom: 0;
@@ -362,15 +440,19 @@ a:hover {
   transition: opacity 0.3s ease;
 }
 
+/* Show caption on hover */
 .gallery-item:hover .caption {
   opacity: 1;
 }
+
+/* ====== Section Layouts for Images and Text ====== */
 .section {
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap; /* Ensures it stacks on small screens */
 }
+
 .section img {
   max-width: 50%;
   height: auto;
@@ -379,13 +461,15 @@ a:hover {
 
 .text-block {
   max-width: 50%;
-  
 }
+
+/* Fade-in animation for section content */
 .section img, .text-block {
   flex: 1;
   animation: fadeIn 4s ease-in-out;
 }
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+
+/* ====== Section Spacing for Specific IDs ====== */
+#bedroom { margin-bottom: 150px; }
+#living-room { margin-bottom: 150px; }
+#dinettes { margin-bottom: 150px; }
