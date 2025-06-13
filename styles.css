@@ -490,7 +490,7 @@ a:hover {
   Styles a specific heading for branding and emphasis.
 */
 .surplusfurniture {
-  margin-left: 200px; /* Indents heading from left */
+  margin-left: 90px; /* Indents heading from left */
   font-family: "Archivo Black", sans-serif; /* Bold, distinctive font */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
   text-align: center; /* Centers text */
