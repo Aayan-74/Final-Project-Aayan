@@ -1,151 +1,166 @@
 <!DOCTYPE html>
+<!-- Declares the document type and version of HTML being used (HTML5) -->
 <html lang="en">
 <head>
+    <!-- Sets the character encoding for the document to UTF-8, supporting most characters -->
     <meta charset="UTF-8">
+    <!-- Ensures the page is responsive and scales correctly on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link to external CSS file -->
+    <!-- Sets the title of the page, which appears in the browser tab -->
+    <title>Surplus Furniture</title>
+    <!-- Links to an external CSS file for custom styles -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts preconnect and font import -->
+    <!-- Preconnects to Google Fonts domains for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the 'Archivo Black' font from Google Fonts for use in headings -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
-        // Toggles the visibility of the navigation menu on small screens
+        // Function to toggle the visibility of the navigation menu on small screens
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
-        // Redirects to cart page when cart icon is clicked
+        // Assigns a click event to the cart icon to redirect to the cart page
         document.getElementById("cart-icon").onclick = function () {
             window.location.href = "cart.html";
         };
-        // Redirects to home page when logo is clicked
+        // Assigns a click event to the logo to redirect to the home page
         document.getElementById("logo").onclick = function () {
             window.location.href = "index.html";
         }
     </script>
     <style>
-        /* Custom styles for headings and content */
+        /* Styles all h1 headings with a custom font, shadow, and centers the text */
         h1 {
             font-family: "Archivo Black", sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
+        /* Adds a fade-in animation to elements with the 'center-content' class */
         .center-content {animation: fadeIn 2s ease-in-out;}
+        /* Defines the fade-in keyframes for the animation */
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
         }
-        .surplusfurniture {
-            margin-left: 200px;
-        }
     </style>
 </head>
 <body>
-    <!-- Header and navigation bar -->
+    <!-- Header section containing the navigation bar and site branding -->
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <!-- Hamburger menu icon for mobile navigation -->
+                <!-- Hamburger menu icon for toggling navigation links on mobile devices -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-                <!-- Collapsible menu links -->
+                <!-- Collapsible menu links for main product categories, hidden on small screens -->
                 <div class="menu-links" id="menuLinks">
                     <a href="living-room.html" tabindex="3">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="4">BEDROOM</a>
                     <a href="dinettes.html" tabindex="5">DINETTES</a>
                     <a href="homedecor.html" tabindex="6">HOME DECOR</a>
                 </div>
-                <!-- Additional navigation links -->
+                <!-- Additional navigation links for contact, about, home, and landing page -->
                 <a href="contact.html" tabindex="7">CONTACT US</a>
                 <a href="about.html" tabindex="8">ABOUT US</a>
                 <a href="index.html" tabindex="9">HOME</a>
-                <!-- Site title -->
+                <a href="landingpage.html" tabindex="10">LANDING PAGE</a>
+                <!-- Site title displayed as a heading for branding -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="10">
-                <!-- Company logo (clickable) -->
-                <span class="icon" id="logo" onclick="window.location.href='index.html'" tabindex="11">
-                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="12">
+            <div class="right-menu" tabindex="11">
+                <!-- Company logo, clickable to return to the home page -->
+                <span class="icon" id="logo" onclick="window.location.href='index.html'" tabindex="12">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="13">
                 </span>
-                <!-- Search bar -->
-                <input type="text" placeholder="Search..." class="search-bar" tabindex="13" />
-                <!-- Cart icon (clickable) -->
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="14">🛒</span>
+                <!-- Search bar for user queries, allowing users to search for products -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="14" />
+                <!-- Cart icon, clickable to go to the shopping cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="15">🛒</span>
             </div>
         </nav>
     </header>
-    <!-- Hero section with overlay text -->
-    <main class="hero-section" tabindex="15">
-        <div class="overlay-text" tabindex="16">
-            <h1 tabindex="17">Simple. Elegant. Timeless.</h1>
+    <!-- Main hero section with overlay text for branding and tagline -->
+    <main class="hero-section" tabindex="16">
+        <div class="overlay-text" tabindex="17">
+            <!-- Main headline for the hero section, emphasizing the brand's style -->
+            <h1 tabindex="18">Simple. Elegant. Timeless.</h1>
             <br>
-            <h2 tabindex="18">Timeless design. Lasting comfort. Crafted to elevate every space.</h2>
+            <!-- Subheadline describing the brand's philosophy and product quality -->
+            <h2 tabindex="19">Timeless design. Lasting comfort. Crafted to elevate every space.</h2>
         </div>
     </main>
     <br>
     <br>
-    <!-- Section introducing product categories -->
+    <!-- Section introducing the product categories to the user -->
     <section class="center-content">
-        <h1 tabindex="19">Find Your Style</h1>
-        <p tabindex="20">Browse curated selections for the living room, bedroom, dining area, and more. Made to last. Designed to fit in.</p>
+        <h1 tabindex="20">Find Your Style</h1>
+        <p tabindex="21">Browse curated selections for the living room, bedroom, dining area, and more. Made to last. Designed to fit in.</p>
     </section>
-    <!-- Row of category images with links -->
-    <div class="image-row" tabindex="21">
-        <div class="img-col" tabindex="22">
-            <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="23">
-            <a href="bedroom.html" class="img-btn" id="bedroom" tabindex="24">Bedroom-Furniture</a>
+    <!-- Row of images representing different product categories, each with a link -->
+    <div class="image-row" tabindex="22">
+        <!-- Bedroom furniture category with image and link -->
+        <div class="img-col" tabindex="23">
+            <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="24">
+            <a href="bedroom.html" class="img-btn" id="bedroom" tabindex="25">Bedroom-Furniture</a>
         </div>
-        <div class="img-col" tabindex="25">
-            <img src="images/decor5.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="26">
-            <a href="homedecor.html" class="img-btn" tabindex="27"> Home-Decor</a>
+        <!-- Home decor category with image and link -->
+        <div class="img-col" tabindex="26">
+            <img src="images/decor5.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="27">
+            <a href="homedecor.html" class="img-btn" tabindex="28"> Home-Decor</a>
         </div>
-        <div class="img-col" tabindex="25">
-            <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="28">
-            <a href="living-room.html" class="img-btn" id="living-room" tabindex="29"> Living-Room Furniture</a>
+        <!-- Living room furniture category with image and link -->
+        <div class="img-col" tabindex="29">
+            <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="30">
+            <a href="living-room.html" class="img-btn" id="living-room" tabindex="31"> Living-Room Furniture</a>
         </div>
-        <div class="img-col" tabindex="30">
-            <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="31">
-            <a href="dinettes.html" class="img-btn" id="dinettes" tabindex="32">Dinettes</a>
+        <!-- Dinettes category with image and link -->
+        <div class="img-col" tabindex="32">
+            <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="33">
+            <a href="dinettes.html" class="img-btn" id="dinettes" tabindex="34">Dinettes</a>
         </div>
     </div>
-    <!-- Section describing company philosophy -->
+    <!-- Section describing the company's design philosophy and product focus -->
     <section class="center-content">
-        <h1 tabindex="33">Simple pieces. Timeless spaces.</h1>
-        <p tabindex="34">We offer quality furniture for every room—clean lines, warm textures, and a focus on comfort. No clutter. Just what matters.</p>
+        <h1 tabindex="35">Simple pieces. Timeless spaces.</h1>
+        <p tabindex="36">We offer quality furniture for every room—clean lines, warm textures, and a focus on comfort. No clutter. Just what matters.</p>
     </section>
-    <!-- Section listing company advantages -->
+    <!-- Section listing the company's advantages and selling points -->
     <section class="center-content">
-        <h1 tabindex="35">Why Choose Us?</h1>
+        <h1 tabindex="37">Why Choose Us?</h1>
         <ul>
-            <li tabindex="36">✔ Handpicked quality at unbeatable prices</li>
-            <li tabindex="37">✔ Canadian-made and internationally sourced designs</li>
-            <li tabindex="38">✔ Fast delivery and excellent customer support</li>
-            <li tabindex="39">✔ New arrivals weekly—refresh your space today</li>
-            <li tabindex="40">✔ We promise to beat the in-stock advertised price of all competitors by 5%</li>
-            <li tabindex="41">✔ Same day delivery!</li>
+            <li tabindex="38">✔ Handpicked quality at unbeatable prices</li>
+            <li tabindex="39">✔ Canadian-made and internationally sourced designs</li>
+            <li tabindex="40">✔ Fast delivery and excellent customer support</li>
+            <li tabindex="41">✔ New arrivals weekly—refresh your space today</li>
+            <li tabindex="42">✔ We promise to beat the in-stock advertised price of all competitors by 5%</li>
+            <li tabindex="43">✔ Same day delivery!</li>
         </ul>
     </section>
-    <!-- Section introducing popular products -->
+    <!-- Section introducing popular products to the user -->
     <section class="center-content">
-        <h1 tabindex="42">Here are some of our popular products</h1>
+        <h1 tabindex="44">Here are some of our popular products</h1>
     </section>
-    <!-- Product gallery -->
-    <div class="gallery" tabindex="43">
-        <div class="gallery-item" tabindex="44">
-            <img src="images/bed.jpg" alt="Dark brown dark wood bed with a night table" tabindex="45">
-            <div class="caption" tabindex="46">Cocoa root</div>
+    <!-- Product gallery displaying featured items with captions -->
+    <div class="gallery" tabindex="45">
+        <!-- Gallery item: Cocoa root bed with image and caption -->
+        <div class="gallery-item" tabindex="46">
+            <img src="images/bed.jpg" alt="Dark brown dark wood bed with a night table" tabindex="47">
+            <div class="caption" tabindex="48">Cocoa root</div>
         </div>
-        <div class="gallery-item" tabindex="47">
-            <img src="images/sofa10.jpg" alt="a picture of an armchair with a burgundy color and dark brown wood accents" tabindex="48">
-            <div class="caption" tabindex="49">Burgundy Bliss</div>
+        <!-- Gallery item: Burgundy Bliss armchair with image and caption -->
+        <div class="gallery-item" tabindex="49">
+            <img src="images/sofa10.jpg" alt="a picture of an armchair with a burgundy color and dark brown wood accents" tabindex="50">
+            <div class="caption" tabindex="51">Burgundy Bliss</div>
         </div>
-        <div class="gallery-item" tabindex="50">
-            <img src="images/decor1.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="51">
-            <div class="caption" tabindex="52">Floral elegance</div>
+        <!-- Gallery item: Floral elegance decor with image and caption -->
+        <div class="gallery-item" tabindex="52">
+            <img src="images/decor1.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="53">
+            <div class="caption" tabindex="54">Floral elegance</div>
         </div>
-        <div class="gallery-item" tabindex="53">
-            <img src="images/dinette12.jpg" alt="an image of a modern-looking brown and white dinette with 4 brown and white chairs" tabindex="54"/>
-            <div class="caption" tabindex="55">
+        <!-- Gallery item: Maple dinette set with image and caption -->
+        <div class="gallery-item" tabindex="55">
+            <img src="images/dinette12.jpg" alt="an image of a modern-looking brown and white dinette with 4 brown and white chairs" tabindex="56"/>
+            <div class="caption" tabindex="57">
                 Maple
             </div>
         </div>
@@ -153,15 +168,16 @@
     <br>
     <br>
     <br>
-    <!-- Footer with copyright and social media links -->
-    <footer tabindex="56">
-        <p tabindex="57">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-        <p tabindex="58">Follow us on social media: 
-            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="59">Facebook</a> | 
-            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="60">Instagram</a> | 
-            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="61">Youtube</a> |
-            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="62">Pinterest</a> |
-            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="63">Tiktok</a>
+    <!-- Footer section with copyright and social media links -->
+    <footer tabindex="58">
+        <p tabindex="59">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+        <p tabindex="60">Follow us on social media: 
+            <!-- Social media links open in new tabs for user convenience -->
+            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="60">Facebook</a> | 
+            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="61">Instagram</a> | 
+            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="62">Youtube</a> |
+            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="63">Pinterest</a> |
+            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="64">Tiktok</a>
         </p>
     </footer>
 </body>

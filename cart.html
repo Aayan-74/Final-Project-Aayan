@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link to external stylesheet -->
+    <title>Cart</title>
+    <!-- Link to external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Google Fonts preconnect and font imports -->
+    <!-- Preconnect to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Import Open Sans font with weights 400 and 600 -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Import Archivo Black font for headings or special text -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
-        // Toggles the visibility of the menu links for mobile navigation
+        // Function to toggle the visibility of the collapsible menu links (for mobile navigation)
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
-        // Redirects to cart page when cart icon is clicked
-        document.getElementById("cart-icon").onclick =function () {
-            window.location.href ="cart.html";
+        // Assigns a click event to the cart icon to redirect to the cart page
+        document.getElementById("cart-icon").onclick = function () {
+            window.location.href = "cart.html";
         };
-        // Redirects to home page when logo is clicked
-        document.getElementById("logo").onclick =function () {
-            window.location.href ="index.html";
+        // Assigns a click event to the logo to redirect to the home page
+        document.getElementById("logo").onclick = function () {
+            window.location.href = "index.html";
         }
     </script>
     <style>
-        /* Fade-in animation for main content */
-        .center-content {animation: fadeIn 2s ease-in-out;}
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        /* Applies a fade-in animation to elements with the 'center-content' class */
+        .center-content {
+            animation: fadeIn 2s ease-in-out;
         }
-        /* Logo styling */
+        /* Keyframes for fade-in animation: starts transparent, ends fully opaque */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Styles the logo: centers it vertically and adds left margin */
         #logo {
             justify-content: center;
             align-items: center;
             margin-left: 20px;
         }
-        /* Cart image margin */
+        /* Adds left margin to the cart image for spacing */
         #cart-image {
             margin-left: 550px;
         }
@@ -46,77 +52,88 @@
 </head>
 <body>
     <header>
-        <!-- Navigation bar -->
+        <!-- Navigation bar containing site navigation and branding -->
         <nav class="navbar">
             <div class="left-menu">
-                <!-- Hamburger menu icon for mobile -->
+                <!-- Hamburger menu icon for toggling navigation links on mobile devices -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-                <!-- Collapsible menu links -->
+                <!-- Collapsible menu links for main furniture categories -->
                 <div class="menu-links" id="menuLinks">
                     <a href="living-room.html" tabindex="3">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="4">BEDROOM</a>
                     <a href="dinettes.html" tabindex="5">DINETTES</a>
                     <a href="homedecor.html" tabindex="6">HOME DECOR</a>
                 </div>
-                <!-- Additional navigation links -->
+                <!-- Additional navigation links for contact, about, home, and landing page -->
                 <a href="contact.html" tabindex="7">CONTACT US</a>
                 <a href="about.html" tabindex="8">ABOUT US</a>
                 <a href="index.html" tabindex="9">HOME</a>
-                <!-- Website title -->
+                <a href="landingpage.html" tabindex="10">LANDING PAGE</a>
+                <!-- Website title displayed prominently in the navigation bar -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="10">
-                <!-- Company logo (clickable) -->
-                <span class="icon" tabindex="11">
-                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="12" onclick="window.location.href='index.html'">
+            <div class="right-menu" tabindex="11">
+                <!-- Company logo: clickable image that redirects to the home page -->
+                <span class="icon" tabindex="12">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="13" onclick="window.location.href='index.html'">
                 </span>
-                <!-- Search bar -->
-                <input type="text" placeholder="Search..." class="search-bar" tabindex="13" />
-                <!-- Cart icon (clickable) -->
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="14" role="button" aria-label="Cart">🛒</span>
+                <!-- Search bar for users to search the site -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="14" />
+                <!-- Cart icon: clickable emoji that redirects to the cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="15" role="button" aria-label="Cart">🛒</span>
             </div>
         </nav>
     </header>
     <main>
-        <!-- Main cart content -->
+        <!-- Main content area for the cart page -->
         <section class="center-content">
-            <h1 tabindex="15">Your Cart</h1>
-            <b><h2 tabindex="16">Uh oh. Looks like your cart is empty...</h2></b>
-            <h2 tabindex="17">Don't know where to start?</h2>
-            <h2 tabindex="18">Check out our furniture categories below!</h2>
+            <!-- Heading indicating the cart page -->
+            <h1 tabindex="16">Your Cart</h1>
+            <!-- Message indicating the cart is empty -->
+            <b><h2 tabindex="17">Uh oh. Looks like your cart is empty...</h2></b>
+            <!-- Suggestions for users who don't know where to start -->
+            <h2 tabindex="18">Don't know where to start?</h2>
+            <h2 tabindex="19">Check out our furniture categories below!</h2>
         </section>
         <br>
-        <!-- Category image links -->
-        <div class="image-row" tabindex="19">
-            <div class="img-col" tabindex="20">
-                <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="21">
-                <a href="bedroom.html" class="img-btn" tabindex="22" id="bedroom">Bedroom-Furniture</a>
+        <!-- Row of category images with links to respective furniture pages -->
+        <div class="image-row" tabindex="20">
+            <!-- Bedroom furniture category -->
+            <div class="img-col" tabindex="21">
+                <img src="images/bed1.jpg" alt="picture of a light brown wood bed" tabindex="22">
+                <a href="bedroom.html" class="img-btn" tabindex="23" id="bedroom">Bedroom-Furniture</a>
             </div>
-            <div class="img-col" tabindex="23">
-                <img src="images/decor5.jpg" alt="image of " tabindex="24">
-                <a href="homedecor.html" class="img-btn" tabindex="25"> Home-Decor</a>
+            <!-- Home decor category -->
+            <div class="img-col" tabindex="24">
+                <img src="images/decor5.jpg" alt="image of " tabindex="25">
+                <a href="homedecor.html" class="img-btn" tabindex="26"> Home-Decor</a>
             </div>
-            <div class="img-col" tabindex="26">
-                <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="27">
-                <a href="living-room.html" class="img-btn" tabindex="28" id="living-room"> Living-Room Furniture</a>
+            <!-- Living room furniture category -->
+            <div class="img-col" tabindex="27">
+                <img src="images/living-room-sofa.jpg" alt="image of a grey loveseat and armchair" tabindex="28">
+                <a href="living-room.html" class="img-btn" tabindex="29" id="living-room"> Living-Room Furniture</a>
             </div>
-            <div class="img-col" tabindex="29">
-                <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="30">
-                <a href="dinettes.html" class="img-btn" tabindex="31" id="dinettes">Dinettes</a>
+            <!-- Dinettes category -->
+            <div class="img-col" tabindex="30">
+                <img src="images/dinette.jpg" alt="image of a wooden dinette set with table and chairs" tabindex="31">
+                <a href="dinettes.html" class="img-btn" tabindex="32" id="dinettes">Dinettes</a>
             </div>
         </div>
     </main>
     <footer>
-        <!-- Footer with copyright and social media links -->
+        <!-- Footer section with copyright and social media links -->
         <b>
-            <p tabindex="32">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-            <p tabindex="33">Images are from surplus-furniture.</p>
-            <p tabindex="34">Follow us on social media: 
-                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="35">Facebook</a> | 
-                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="36">Instagram</a> | 
-                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="37">Youtube</a> |
-                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="38">Pinterest</a> |
-                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="39">Tiktok</a>
+            <!-- Copyright notice -->
+            <p tabindex="33">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <!-- Image source attribution -->
+            <p tabindex="34">Images are from surplus-furniture.</p>
+            <!-- Social media links for user engagement -->
+            <p tabindex="35">Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="36">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="37">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="38">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="39">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="40">Tiktok</a>
             </p>
         </b>
     </footer>

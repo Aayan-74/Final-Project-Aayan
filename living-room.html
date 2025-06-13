@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declares the document type and version of HTML being used -->
+<html lang="en"></html>
 <head>
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Ensures the page is responsive and scales correctly on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the title of the page as it appears in the browser tab -->
     <title>living-room Furniture</title>
-    <!-- Link to external stylesheet -->
+    <!-- Links to an external CSS stylesheet for additional styles -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Google Fonts preconnect and imports -->
+    <!-- Preconnects to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Imports the 'Open Sans' font from Google Fonts with weights 400 and 600 -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> <!-- Archivo Black font import -->
+    <!-- Imports the 'Archivo Black' font from Google Fonts for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
-    // Toggles the visibility of the navigation menu on small screens
+    // Toggles the visibility of the navigation menu on small screens by adding/removing the 'show' class
     function toggleMenu() {
         document.getElementById("menuLinks").classList.toggle("show");
     }
-    // Redirects to cart page when cart icon is clicked
+    // Redirects the user to the cart page when the cart icon is clicked
     document.getElementById("cart-icon").onclick = function () {
         window.location.href = "cart.html";
     };
-    // Redirects to home page when logo is clicked
+    // Redirects the user to the home page when the logo is clicked
     document.getElementById("logo").onclick = function () {
         window.location.href = "index.html";
     }
     </script>
     <style>
-        /* Adds rounded corners to all images */
+        /* Applies rounded corners to all images on the page */
         img {
             border-radius: 10px;
         }
-        /* Styles for main headings */
+        /* Styles the main headings with the 'Archivo Black' font and centers them */
         h1 {
             font-family: 'Archivo Black', sans-serif;
             text-align: center;
@@ -38,170 +44,197 @@
     </style>
 </head>
 <body>
-    <!-- Navigation bar and header -->
+    <!-- Header section containing the navigation bar and website title -->
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <!-- Hamburger menu icon for mobile navigation -->
+                <!-- Hamburger menu icon for toggling navigation links on mobile devices -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-                <!-- Collapsible menu links -->
+                <!-- Collapsible navigation links for different furniture categories -->
                 <div class="menu-links" id="menuLinks" tabindex="3">
                     <a href="living-room.html" tabindex="4">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="5">BEDROOM</a>
                     <a href="dinettes.html" tabindex="6">DINETTES</a>
                     <a href="homedecor.html" tabindex="7">HOME DECOR</a>
-                    <a href="landingpage.html" tabindex="8">LANDING PAGE</a>
                 </div>
-                <!-- Additional navigation links -->
-                <a href="contact.html" tabindex="9">CONTACT US</a>
-                <a href="about.html" tabindex="10">ABOUT US</a>
-                <a href="index.html" tabindex="11">HOME</a>
-                <!-- Website title -->
+                <!-- Additional navigation links for contact, about, home, and landing page -->
+                <a href="contact.html" tabindex="8">CONTACT US</a>
+                <a href="about.html" tabindex="9">ABOUT US</a>
+                <a href="index.html" tabindex="10">HOME</a>
+                <a href="landingpage.html" tabindex="11">LANDING PAGE</a>
+                <!-- Website title displayed prominently in the navigation bar -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="12">
-                <!-- Company logo (clickable) -->
+            <div class="right-menu" tabindex="12"></div>
+                <!-- Company logo image, clickable to return to the homepage -->
                 <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="13"></span>
-                <!-- Search bar -->
+                <!-- Search bar for users to search for products or content -->
                 <input type="text" placeholder="Search..." class="search-bar" tabindex="14"/>
-                <!-- Cart icon (clickable) -->
+                <!-- Cart icon, clickable to go to the shopping cart page -->
                 <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="15">🛒</span>
             </div>
         </nav>
     </header>
-    <!-- Main heading for the page -->
+    <!-- Main heading for the Living Room Furniture page, centered on the page -->
     <section class="center-content">
         <h1 tabindex="16">Living Room Furniture</h1>
     </section>
-    <!-- Introduction and description of the living room furniture collection -->
+    <!-- Introduction section describing the living room furniture collection -->
     <section class="center-content">
-        <p tabindex="17">Welcome to our Living Room Furniture collection! Here, you'll find a wide range of sofas, chairs, coffee tables, and more to create the perfect living space. Whether you prefer modern, traditional, or contemporary styles, we have something for everyone.</p>
-        <p tabindex="18">Explore our selection of high-quality furniture designed to enhance your comfort and style. From cozy sofas to elegant coffee tables, we have everything you need to make your living room a welcoming and functional space.</p>
-        <p tabindex="19">Browse through our collection and discover the perfect pieces to complement your home decor. Our furniture is crafted with care and attention to detail, ensuring both durability and aesthetic appeal.</p>
-        <p tabindex="20">Shop now and transform your living room into a stylish and comfortable haven. Enjoy the convenience of online shopping with fast delivery options available.</p>
+        <p tabindex="17">
+            Welcome to our Living Room Furniture collection! Here, you'll find a wide range of sofas, chairs, coffee tables, and more to create the perfect living space. Whether you prefer modern, traditional, or contemporary styles, we have something for everyone.
+        </p>
+        <p tabindex="18">
+            Explore our selection of high-quality furniture designed to enhance your comfort and style. From cozy sofas to elegant coffee tables, we have everything you need to make your living room a welcoming and functional space.
+        </p>
+        <p tabindex="19">
+            Browse through our collection and discover the perfect pieces to complement your home decor. Our furniture is crafted with care and attention to detail, ensuring both durability and aesthetic appeal.
+        </p>
+        <p tabindex="20"></p>
+            Shop now and transform your living room into a stylish and comfortable haven. Enjoy the convenience of online shopping with fast delivery options available.
+        </p>
     </section>
-    <!-- Gallery of living room furniture images -->
+    <!-- First gallery row displaying living room furniture images and captions -->
     <div class="gallery" tabindex="21">
+        <!-- Gallery item: Grey sofa -->
         <div class="gallery-item" tabindex="22">
             <img src="images/sofa.jpg" alt="A soft grey sofa with extreme comfort" tabindex="23">
             <div class="caption" tabindex="24">
                 Foggy Haven
             </div>
         </div>
+        <!-- Gallery item: Light brown sofa and table -->
         <div class="gallery-item" tabindex="25">
             <img src="images/sofa2.png" alt="image of a light brown sofa with a light brown table in front of it" tabindex="26">
-            <div class="caption" tabindex="27">
+            <div class="caption" tabindex="27"></div>
                 Cozy Retreat
             </div>
         </div>
-        <!-- Add more images here -->
-        <div class="gallery-item" tabindex="27">
-            <img src="images/sofa3.jpg" alt="sofa with a dark brown color and dark brown pillows" tabindex="28">
-            <div class="caption" tabindex="29">
+        <!-- Gallery item: Dark brown sofa and pillows -->
+        <div class="gallery-item" tabindex="28">
+            <img src="images/sofa3.jpg" alt="sofa with a dark brown color and dark brown pillows" tabindex="29">
+            <div class="caption" tabindex="30">
                 mocha grove
             </div>
         </div>
-        <div class="gallery-item" tabindex="30">
-            <img src="images/sofa4.jpg" alt="sofa with a navy blue color with light blue pillows" tabindex="31">
-            <div class="caption" tabindex="32">
+        <!-- Gallery item: Navy blue sofa with light blue pillows -->
+        <div class="gallery-item" tabindex="31">
+            <img src="images/sofa4.jpg" alt="sofa with a navy blue color with light blue pillows" tabindex="32">
+            <div class="caption" tabindex="33">
                 Ocean Breeze
             </div>
         </div>
     </div>
-    <!-- Second gallery row -->
-    <div class="gallery" tabindex="33">
-        <div class="gallery-item" tabindex="34">
-            <img src="images/sofa5.png" alt="dark brown sofa with a light brown table in front of it and a light brown table beside it" tabindex="35">
-            <div class="caption" tabindex="36">
+    <!-- Second gallery row with more living room furniture images -->
+    <div class="gallery" tabindex="34">
+        <!-- Gallery item: Dark brown sofa with tables -->
+        <div class="gallery-item" tabindex="35">
+            <img src="images/sofa5.png" alt="dark brown sofa with a light brown table in front of it and a light brown table beside it" tabindex="36">
+            <div class="caption" tabindex="37"></div>
                 Rustic Charm
             </div>
         </div>
-        <div class="gallery-item" tabindex="37">
-            <img src="images/sofa6.jpg" alt="sofa with a Black color and a light brown table in front of it" tabindex="38">
-            <div class="caption" tabindex="39">
+        <!-- Gallery item: Black sofa with light brown table -->
+        <div class="gallery-item" tabindex="38">
+            <img src="images/sofa6.jpg" alt="sofa with a Black color and a light brown table in front of it" tabindex="39">
+            <div class="caption" tabindex="40">
                 Midnight Elegance
             </div>
         </div>
-        <div class="gallery-item" tabindex="40">
-            <img src="images/sofa7.jpg" alt="sofa with a green color and a light brown table in front of it" tabindex="41">
-            <div class="caption" tabindex="42">
+        <!-- Gallery item: Green sofa with light brown table -->
+        <div class="gallery-item" tabindex="41">
+            <img src="images/sofa7.jpg" alt="sofa with a green color and a light brown table in front of it" tabindex="42">
+            <div class="caption" tabindex="43"></div>
                 Emerald Oasis
             </div>
         </div>
-        <div class="gallery-item" tabindex="43">
-            <img src="images/sofa8.jpg" alt="sofa with a white color and a white table beside it" tabindex="44">
-            <div class="caption" tabindex="45">
+        <!-- Gallery item: White sofa with white table -->
+        <div class="gallery-item" tabindex="44">
+            <img src="images/sofa8.jpg" alt="sofa with a white color and a white table beside it" tabindex="45">
+            <div class="caption" tabindex="46">
                 Ivory Bliss
             </div>
         </div>
-        <div class="gallery-item" tabindex="46">
-            <img src="images/sofa-8.jpg" alt="A black sofa with a light brown fur cloth on it" tabindex="47">
-            <div class="caption" tabindex="48">
+        <!-- Gallery item: Black sofa with fur cloth -->
+        <div class="gallery-item" tabindex="47">
+            <img src="images/sofa-8.jpg" alt="A black sofa with a light brown fur cloth on it" tabindex="48">
+            <div class="caption" tabindex="49"></div>
                 Midnight Velvet
             </div>
         </div>
     </div>
-    <!-- Third gallery row -->
-    <div class="gallery" tabindex="49">
-        <div class="gallery-item" tabindex="50">
-            <img src="images/sofa9.jpg" alt="sofa with a light brown color and a light brown table in front of it" tabindex="51">
-            <div class="caption" tabindex="52">
+    <!-- Third gallery row with additional living room furniture images -->
+    <div class="gallery" tabindex="50"></div>
+        <!-- Gallery item: Light brown sofa and table -->
+        <div class="gallery-item" tabindex="51">
+            <img src="images/sofa9.jpg" alt="sofa with a light brown color and a light brown table in front of it" tabindex="52">
+            <div class="caption" tabindex="53">
                 Sandy Shores
             </div>
         </div>
-        <div class="gallery-item" tabindex="53">
-            <img src="images/sofa10.jpg" alt="a picture of an armchair with a burgundy color and dark brown wood accents" tabindex="54">
-            <div class="caption" tabindex="55">
+        <!-- Gallery item: Burgundy armchair with wood accents -->
+        <div class="gallery-item" tabindex="54">
+            <img src="images/sofa10.jpg" alt="a picture of an armchair with a burgundy color and dark brown wood accents" tabindex="55">
+            <div class="caption" tabindex="56">
                 Burgundy Bliss
             </div>
         </div>
-        <div class="gallery-item" tabindex="56">
-            <img src="images/sofa11.jpg" alt="a picture of a sofa with a gold color and a gold color table in front of it" tabindex="57">
-            <div class="caption" tabindex="58">
+        <!-- Gallery item: Gold sofa and table -->
+        <div class="gallery-item" tabindex="57">
+            <img src="images/sofa11.jpg" alt="a picture of a sofa with a gold color and a gold color table in front of it" tabindex="58">
+            <div class="caption" tabindex="59"></div>
                 Golden Elegance
             </div>
         </div>
-        <div class="gallery-item" tabindex="59">
-            <img src="images/sofa12.jpg" alt="a picture of a sofa with a light brown color and a light brown table in front of it" tabindex="60">
-            <div class="caption" tabindex="61">
+        <!-- Gallery item: Light brown sofa and table -->
+        <div class="gallery-item" tabindex="60">
+            <img src="images/sofa12.jpg" alt="a picture of a sofa with a light brown color and a light brown table in front of it" tabindex="61">
+            <div class="caption" tabindex="62"></div>
                 Caramel Comfort
             </div>
         </div>
     </div>
-    <!-- Fourth gallery row -->
-    <div class="gallery" tabindex="62">
-        <div class="gallery-item" tabindex="63">
-            <img src="images/sofa13.jpg" alt="a picture of a black sofa with silver accents." tabindex="64">
-            <div class="caption" tabindex="65">
+    <!-- Fourth gallery row with the last set of living room furniture images -->
+    <div class="gallery" tabindex="63">
+        <!-- Gallery item: Black sofa with silver accents -->
+        <div class="gallery-item" tabindex="64">
+            <img src="images/sofa13.jpg" alt="a picture of a black sofa with silver accents." tabindex="65">
+            <div class="caption" tabindex="66">
                 Noir Luxe
             </div>
         </div>
-        <div class="gallery-item" tabindex="66">
-            <img src="images/sofa14.jpg" alt="a picture of cyan sofa with black accents." tabindex="67">
-            <div class="caption" tabindex="68">
+        <!-- Gallery item: Cyan sofa with black accents -->
+        <div class="gallery-item" tabindex="67">
+            <img src="images/sofa14.jpg" alt="a picture of cyan sofa with black accents." tabindex="68">
+            <div class="caption" tabindex="69">
                 Cyan Serenity
             </div>
         </div>
-        <div class="gallery-item" tabindex="69">
-            <img src="images/sofa15.jpg" alt="a picture of a grey sofa with black accents." tabindex="70">
-            <div class="caption" tabindex="71">
+        <!-- Gallery item: Grey sofa with black accents -->
+        <div class="gallery-item" tabindex="70">
+            <img src="images/sofa15.jpg" alt="a picture of a grey sofa with black accents." tabindex="71">
+            <div class="caption" tabindex="72">
                 Slate Sophistication
             </div>
         </div>
     </div>
+    <!-- Adds spacing before the footer -->
     <br>
     <br>
-    <!-- Footer with copyright and social media links -->
-    <footer tabindex="72">
+    <!-- Footer section containing copyright, image credits, and social media links -->
+    <footer tabindex="73">
         <b>
-            <p tabindex="73">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-            <p tabindex="74">first image is from surplus furniture, the rest of the images are generated by AI</p>
-            <p tabindex="75">Follow us on social media: 
-                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="76">Facebook</a> | 
-                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="77">Instagram</a> | 
-                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="78">Youtube</a> |
-                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="79">Pinterest</a> |
-                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="80">Tiktok</a>
+            <!-- Copyright notice -->
+            <p tabindex="74">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <!-- Image credits -->
+            <p tabindex="75">first image is from surplus furniture, the rest of the images are generated by AI</p>
+            <!-- Social media links for users to follow the company -->
+            <p tabindex="76">Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="77">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="78">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="79">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="80">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="81">Tiktok</a>
             </p>
         </b>
     </footer>

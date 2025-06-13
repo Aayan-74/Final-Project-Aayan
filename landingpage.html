@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Sets the language of the document to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Landing Page</title> <!-- Sets the title of the page shown in browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to external CSS stylesheet -->
+    <!-- Preconnects to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the 'Archivo Black' font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
+        // Toggles the visibility of the navigation menu links for responsive/mobile view
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
@@ -22,91 +25,117 @@
         }
     </script>
     <style>
+        /* Adds rounded corners to all images */
         img {
             border-radius: 10px;
         }
+        /* Styles all h1 elements with custom font, center alignment, and text shadow */
         h1 {
             font-family: 'Archivo Black', sans-serif;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+        /* Sets the color of all paragraph text to brown */
         p {color: brown;}
+        /* Sets the color of the welcome statement to brown */
         #welcome-statement {color: brown;}
     </style>
 </head>
 <body>
+    <!-- Header section containing the navigation bar -->
     <header>
         <nav class="navbar">
             <div class="left-menu">
+                <!-- Hamburger menu icon for mobile navigation, triggers toggleMenu() -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
+                <!-- Collapsible menu links for different furniture categories -->
                 <div class="menu-links" id="menuLinks">
                     <a href="living-room.html" tabindex="3">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="4">BEDROOM</a>
                     <a href="dinettes.html" tabindex="5">DINETTES</a>
                     <a href="homedecor.html" tabindex="6">HOME DECOR</a>
                 </div>
+                <!-- Additional navigation links -->
                 <a href="contact.html" tabindex="7">CONTACT US</a>
                 <a href="about.html" tabindex="8">ABOUT US</a>
                 <a href="index.html" tabindex="9">HOME</a>
+                <a href="landingpage.html" tabindex="10">LANDING PAGE</a>
+                <!-- Main site heading/logo -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="10">
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'" tabindex="11"></span>
-                <input type="text" placeholder="Search..." class="search-bar" tabindex="12" />
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="13" role="button" aria-label="View cart">🛒</span>
+            <div class="right-menu" tabindex="11">
+                <!-- Company logo image, clicking redirects to home page -->
+                <span class="icon">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'" tabindex="12">
+                </span>
+                <!-- Search bar for user queries -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="13" />
+                <!-- Cart icon, clicking redirects to cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="14" role="button" aria-label="View cart">🛒</span>
             </div>
         </nav>
     </header>
 
-    <main class="hero-section" tabindex="14">
-        <div class="overlay-text" tabindex="15">
-            <h1 tabindex="16">SURPLUS FURNITURE</h1>
-            <h2 tabindex="17">WHERE INNOVATION MEETS CREATIVITY</h2>
+    <!-- Main hero section with overlay text -->
+    <main class="hero-section" tabindex="15">
+        <div class="overlay-text" tabindex="16">
+            <h1 tabindex="17">SURPLUS FURNITURE</h1>
+            <h2 tabindex="18">WHERE INNOVATION MEETS CREATIVITY</h2>
         </div>
     </main>
     <br>
     <br>
+    <!-- Section showcasing bedroom furniture with introductory text -->
     <section class="center-content">
-        <div class="section">
-            <img src="/images/furniture-bed.jpg" alt="bedroom furniture" id="bedroom-furniture" tabindex="18">
+        <div class="section" tabindex="19">
+            <!-- Bedroom furniture image -->
+            <img src="/images/furniture-bed.jpg" alt="bedroom furniture" id="bedroom-furniture" tabindex="20">
             <div class="text-block">
                 <strong>
-                    <h1 id="welcome-statement" tabindex="19">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</h1>
+                    <!-- Welcome statement heading -->
+                    <h1 id="welcome-statement" tabindex="21">Welcome to Surplus furniture where we provide you the finest pieces of furniture:</h1>
                 </strong>
                 <strong>
-                    <p tabindex="30">At Surplus Furniture, we are committed to providing our customers with the best selection of quality furniture at unbeatable prices. Our team works tirelessly to source the finest pieces from top manufacturers, ensuring that you get the best value for your money.</p>
+                    <!-- Description about the company's commitment and value -->
+                    <p tabindex="22">At Surplus Furniture, we are committed to providing our customers with the best selection of quality furniture at unbeatable prices. Our team works tirelessly to source the finest pieces from top manufacturers, ensuring that you get the best value for your money.</p>
                 </strong>
             </div>
         </div>
     </section>
+    <!-- Section showcasing living room furniture with detailed description -->
     <section class="center-content">
         <div class="section">
-            <img src="/images/Livingroom.jpg" alt="Picture of a sofa in a living room" tabindex="31">
+            <!-- Living room furniture image -->
+            <img src="/images/Livingroom.jpg" alt="Picture of a sofa in a living room" tabindex="23">
             <div class="text-block">
                 <strong>
-                    <p tabindex="32">Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
+                    <!-- Description about inventory and pricing strategy -->
+                    <p tabindex="24">Our furniture inventory purchasers are constantly locating quality, brand name furnishings to stock our stores at rock bottom prices. We then pass the savings to our customers when we purchase directly from the factory. So don't be fooled by fancy carpets, chandeliers and items that are overpriced when Surplus Furniture and Mattress Warehouse near Winnipeg West can get you the warehouse price today!
                     Twin, full, queen or king size mattresses—find what you need at mattress factory outlet prices! It's time to stop paying for overpriced furnishings.</p>
                 </strong>
             </div>
         </div>
     </section>
+    <!-- Section with general introductory content about the store's offerings and services -->
     <section class="center-content">
         <strong>
-            <p id="introductory-content" tabindex="33">We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.
+            <p id="introductory-content" tabindex="25">We have a wide selection of furniture for every room in your home, including sofas, chairs, tables, beds, and more. Our team is dedicated to helping you find the perfect pieces to fit your style and budget.
             We also offer delivery and assembly services to make your shopping experience as convenient as possible. Our goal is to provide you with high-quality furniture at affordable prices, so you can create the home of your dreams without breaking the bank.</p>
         </strong>
     </section>
     <br>
     <br>
     <br>
+    <!-- Footer section with copyright and social media links -->
     <footer>
-            <p tabindex="34">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-            <p tabindex="35">Follow us on social media: 
-                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="36">Facebook</a> | 
-                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="37">Instagram</a> | 
-                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="38">Youtube</a> |
-                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="39">Pinterest</a> |
-                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="40">Tiktok</a>
+            <p tabindex="26">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <p tabindex="27">Follow us on social media: 
+                <!-- Social media links open in new tabs -->
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="28">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="29">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="30">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="31">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="32">Tiktok</a>
             </p>
     </footer>
 </body>

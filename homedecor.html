@@ -1,187 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declares the document type and version of HTML -->
+<html lang="en"></html>
 <head>
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the title of the webpage shown in the browser tab -->
     <title>Home Decor</title>
-    <!-- Link to external CSS file -->
+    <!-- Links to an external CSS stylesheet for additional styles -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts for custom font styling -->
+    <!-- Preconnects to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the 'Archivo Black' font from Google Fonts for headings -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script>
-        // Toggles the visibility of the navigation menu on small screens
+        // Function to toggle the visibility of the navigation menu on small screens
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
-        // Redirects to cart page when cart icon is clicked
+        // The following lines attempt to add click event handlers to elements before the DOM is loaded.
+        // This will cause errors because the elements do not exist yet at this point.
+        // It is better to add these event listeners after the DOM has loaded.
         document.getElementById("cart-icon").onclick = function () {
             window.location.href = "cart.html";
         };
-        // Redirects to home page when logo is clicked
         document.getElementById("logo").onclick = function () {
             window.location.href = "index.html";
         }
     </script>
     <style>
-        /* Heading style with custom font and shadow */
+        /* Styles the main heading with a custom font and a subtle shadow for emphasis */
         h1 {
             font-family: "Archivo Black", sans-serif;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        /* Animation for center content */
+        /* Applies a fade-in animation to elements with the 'center-content' class */
         .center-content {
             animation: fadeIn 2s ease-in-out;
         }
-        /* Fade-in animation keyframes */
+        /* Defines the fade-in animation keyframes for smooth appearance */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        /* Fade-in animation for images */
+        /* Applies the fade-in animation to all images for a smooth loading effect */
         img {animation: fadeIn 2s ease-in-out;}
+        /* Duplicate keyframes for fadeIn (not necessary, but doesn't cause issues) */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        </style>
+    </style>
 </head>
 <body>
     <header>
-        <!-- Navigation bar with menu, links, and logo -->
+        <!-- Navigation bar containing menu, links, and logo -->
         <nav class="navbar">
             <div class="left-menu">
-                <!-- Hamburger menu icon for mobile navigation -->
+                <!-- Hamburger menu icon for toggling navigation links on mobile devices -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-                <!-- Collapsible menu links -->
+                <!-- Collapsible menu links for different furniture categories -->
                 <div class="menu-links" id="menuLinks" tabindex="3">
                     <a href="living-room.html" tabindex="4">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="5">BEDROOM</a>
                     <a href="dinettes.html" tabindex="6">DINETTES</a>
                     <a href="homedecor.html" tabindex="7">HOME DECOR</a>
                 </div>
-                <!-- Additional navigation links -->
+                <!-- Additional navigation links for contact, about, home, and landing page -->
                 <a href="contact.html" tabindex="8">CONTACT US</a>
                 <a href="about.html" tabindex="9">ABOUT US</a>
                 <a href="index.html" tabindex="10">HOME</a>
-                <!-- Website title -->
+                <a href="landingpage.html" tabindex="11">LANDING PAGE</a>
+                <!-- Website title displayed prominently in the navigation bar -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="11">
-                <!-- Company logo (clickable) -->
-                <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'" tabindex="11"></span>
-                <!-- Search bar -->
-                <input type="text" placeholder="Search..." class="search-bar" tabindex="12"/>
-                <!-- Cart icon (clickable) -->
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="13">🛒</span>
+            <div class="right-menu" tabindex="12">
+                <!-- Company logo image, clickable to return to the home page -->
+                <span class="icon">
+                    <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" onclick="window.location.href='index.html'" tabindex="13">
+                </span>
+                <!-- Search bar for users to search for products or content -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="14"/>
+                <!-- Cart icon, clickable to navigate to the shopping cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="15">🛒</span>
             </div>
         </nav>
     </header>
-    <!-- Main content section with introduction -->
+    <!-- Main content section introducing the Home Decor page -->
     <section class="center-content">
-        <h1 tabindex="14">Home Decor</h1>
-        <p tabindex="15">Explore our wide range of home decor items to enhance the beauty of your living space.</p>
-        <p tabindex="16">From elegant wall art to stylish vases, we have everything you need to add a personal touch to your home.</p>
-        <p tabindex="17">Discover unique pieces that reflect your style and create a warm, inviting atmosphere.</p>
-        <p tabindex="18">Whether you're looking for modern, rustic, or classic decor, our collection has something for everyone.</p>
-        <p tabindex="19">Transform your home into a haven of comfort and style with our exquisite home decor selection.</p>
+        <!-- Main heading for the Home Decor section -->
+        <h1 tabindex="16">Home Decor</h1>
+        <!-- Series of paragraphs describing the home decor offerings -->
+        <p tabindex="17">Explore our wide range of home decor items to enhance the beauty of your living space.</p>
+        <p tabindex="18">From elegant wall art to stylish vases, we have everything you need to add a personal touch to your home.</p>
+        <p tabindex="19">Discover unique pieces that reflect your style and create a warm, inviting atmosphere.</p>
+        <p tabindex="20">Whether you're looking for modern, rustic, or classic decor, our collection has something for everyone.</p>
+        <p tabindex="21">Transform your home into a haven of comfort and style with our exquisite home decor selection.</p>
     </section>
-    <!-- First gallery row of decor items -->
-    <div class="gallery" tabindex="20">
-        <div class="gallery-item" tabindex="21">
-            <img src="images/decor.jpg" alt="an image of a home decor item that made of wood and is a vase with flowers." tabindex="22">
-            <div class="caption" tabindex="23">
+    <!-- First gallery row displaying four home decor items -->
+    <div class="gallery" tabindex="22">
+        <!-- Each gallery-item contains an image and a caption describing the decor item -->
+        <div class="gallery-item" tabindex="23">
+            <img src="images/decor.jpg" alt="an image of a home decor item that made of wood and is a vase with flowers." tabindex="24">
+            <div class="caption" tabindex="25">
                 Hearthy
             </div>
         </div>
-        <div class="gallery-item" tabindex="24">
-            <img src="images/decor1.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="25">
-            <div class="caption" tabindex="26">
+        <div class="gallery-item" tabindex="26">
+            <img src="images/decor1.jpg" alt="an image of a home decor item that is a white ceramic vase with flowers." tabindex="27">
+            <div class="caption" tabindex="28">
                 Floral Elegance
             </div>
         </div>
-        <div class="gallery-item" tabindex="27">
-            <img src="images/decor2.jpg" alt="an image of a home decor item that is a wall clock with a wooden frame." tabindex="28">
-            <div class="caption" tabindex="29">
+        <div class="gallery-item" tabindex="29">
+            <img src="images/decor2.jpg" alt="an image of a home decor item that is a wall clock with a wooden frame." tabindex="30">
+            <div class="caption" tabindex="31">
                 Timekeeper
             </div>
         </div>
-        <div class="gallery-item" tabindex="30">
-            <img src="images/decor3.jpg" alt="an image of a home decor item that is a painting of mountains and a lake." tabindex="31">
-            <div class="caption" tabindex="32">
+        <div class="gallery-item" tabindex="32">
+            <img src="images/decor3.jpg" alt="an image of a home decor item that is a painting of mountains and a lake." tabindex="32">
+            <div class="caption" tabindex="33">
                 Mountain Serenity
             </div>
         </div>
     </div>
-    <!-- Second gallery row of decor items -->
-    <div class="gallery" tabindex="33">
-        <div class="gallery-item" tabindex="34">
-            <img src="images/decor4.jpg" alt="an image of a painting of a beach with big blue waves and a bright blue sky." tabindex="35">
-            <div class="caption" tabindex="36">
+    <!-- Second gallery row displaying five home decor items -->
+    <div class="gallery" tabindex="34">
+        <div class="gallery-item" tabindex="35">
+            <img src="images/decor4.jpg" alt="an image of a painting of a beach with big blue waves and a bright blue sky." tabindex="36">
+            <div class="caption" tabindex="37">
                 Coastal Bliss
             </div>
         </div>
-        <div class="gallery-item" tabindex="37">
-            <img src="images/decor5.jpg" alt="an image of a home decor item that is a wooden shelf with books and plants." tabindex="38">
-            <div class="caption" tabindex="39">
+        <div class="gallery-item" tabindex="38">
+            <img src="images/decor5.jpg" alt="an image of a home decor item that is a wooden shelf with books and plants." tabindex="39">
+            <div class="caption" tabindex="40">
                 Rustic Charm
             </div>
         </div>
-        <div class="gallery-item" tabindex="40">
-            <img src="images/decor6.jpg" alt="an image of a home decor item that is a decorative mirror with a golden frame." tabindex="41">
-            <div class="caption" tabindex="42">
+        <div class="gallery-item" tabindex="41">
+            <img src="images/decor6.jpg" alt="an image of a home decor item that is a decorative mirror with a golden frame." tabindex="42">
+            <div class="caption" tabindex="43">
                 Golden Reflections
             </div>
         </div>
-        <div class="gallery-item" tabindex="43">
-            <img src="images/decor7.jpg" alt="an image of a home decor item that is a set of candles in different sizes." tabindex="44">
-            <div class="caption" tabindex="45">
+        <div class="gallery-item" tabindex="44">
+            <img src="images/decor7.jpg" alt="an image of a home decor item that is a set of candles in different sizes." tabindex="45">
+            <div class="caption" tabindex="46">
                 Candlelit Ambiance
             </div>
         </div>
-        <div class="gallery-item" tabindex="46">
-            <img src="images/decor8.jpg" alt="an image of a white lamp with a white ceramic base on a wooden table." tabindex="47">
-            <div class="caption" tabindex="48">
+        <div class="gallery-item" tabindex="47">
+            <img src="images/decor8.jpg" alt="an image of a white lamp with a white ceramic base on a wooden table." tabindex="48">
+            <div class="caption" tabindex="49">
                 Illuminating Elegance
             </div>
         </div>
     </div>
-    <!-- Third gallery row of decor items -->
-    <div class="gallery" tabindex="49">
-        <div class="gallery-item" tabindex="50">
-            <img src="images/decor9.jpg" alt="an image of a brown lamp with an Illuminating beige body and wood base." tabindex="51">
-            <div class="caption" tabindex="52">
+    <!-- Third gallery row displaying three home decor items -->
+    <div class="gallery" tabindex="50">
+        <div class="gallery-item" tabindex="51">
+            <img src="images/decor9.jpg" alt="an image of a brown lamp with an Illuminating beige body and wood base." tabindex="52">
+            <div class="caption" tabindex="53">
                 Warm Glow
             </div>
         </div>
-        <div class="gallery-item" tabindex="53">
-            <img src="images/decor10.jpg" alt="an image of a painting of a dense forest with a pathway leading through it." tabindex="54">
-            <div class="caption" tabindex="55">
+        <div class="gallery-item" tabindex="54">
+            <img src="images/decor10.jpg" alt="an image of a painting of a dense forest with a pathway leading through it." tabindex="55">
+            <div class="caption" tabindex="56">
                 Whispers of the Woods
             </div>
         </div>
-        <div class="gallery-item" tabindex="56">
-            <img src="images/decor11.jpg" alt="an image of a grey lamp with a ceramic body and a brown base." tabindex="57">
-            <div class="caption" tabindex="58">
+        <div class="gallery-item" tabindex="57">
+            <img src="images/decor11.jpg" alt="an image of a grey lamp with a ceramic body and a brown base." tabindex="58">
+            <div class="caption" tabindex="59">
                 Ashlight
             </div>
         </div>
     </div>
+    <!-- Adds vertical spacing before the footer -->
     <br>
     <br>
     <br>
-    <!-- Footer with copyright and social media links -->
-    <footer tabindex="59">
-        <p tabindex="60">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-        <p tabindex="61">All images in this webpage are AI generated by Deep AI</p>
-        <p tabindex="62">Follow us on social media: 
-            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="63">Facebook</a> | 
-            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="64">Instagram</a> | 
-            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="65">Youtube</a> |
-            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="66">Pinterest</a> |
-            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="67">Tiktok</a>
+    <!-- Footer section containing copyright and social media links -->
+    <footer tabindex="60">
+        <!-- Copyright notice -->
+        <p tabindex="61">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+        <!-- Attribution for image sources -->
+        <p tabindex="62">All images in this webpage are AI generated by Deep AI</p>
+        <!-- Social media links for users to follow the company -->
+        <p tabindex="63">Follow us on social media: 
+            <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="64">Facebook</a> | 
+            <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="65">Instagram</a> | 
+            <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="66">Youtube</a> |
+            <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="67">Pinterest</a> |
+            <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="68">Tiktok</a>
         </p>
     </footer>
 </body>

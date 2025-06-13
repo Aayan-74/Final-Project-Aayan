@@ -1,121 +1,171 @@
-<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
-<html lang="en"> <!-- Root element with language set to English -->
+<!DOCTYPE html> <!-- Declares the document type and version of HTML5 for browser rendering -->
+<html lang="en"> <!-- Root element of the HTML document, specifies English as the language -->
 <head>
-    <meta charset="UTF-8"> <!-- Sets character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
-    <title>Document</title> <!-- Title shown in browser tab -->
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for styling -->
-    <!-- Google Fonts preconnect and font import for custom typography -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive scaling on mobile devices -->
+    <title>About Us</title> <!-- Sets the title of the page shown in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for additional styling -->
+    <!-- Preconnects to Google Fonts domains for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the 'Archivo Black' font from Google Fonts for custom typography -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <style>
-        /* Inline CSS for basic body and animation styling */
+        /* Removes default body padding and margin for a clean layout */
         body { padding: 0; margin: 0; }
-        .center-content {animation: fadeIn 2s ease-in-out;}
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-        iframe { display: block; margin: 0 auto; } /* Center the iframe */
-        img { display: block; margin: 0 auto; width: 100%; max-width: 600px; } /* Center images and set max width */
+        /* Applies fade-in animation to elements with the 'center-content' class */
+        .center-content { animation: fadeIn 2s ease-in-out; }
+        /* Defines the fadeIn animation: starts transparent, ends fully opaque */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* Centers the iframe horizontally within its container */
+        iframe { display: block; margin: 0 auto; }
+        /* Centers images, sets width to 100% of container, and limits max width to 600px */
+        img { display: block; margin: 0 auto; width: 100%; max-width: 600px; }
     </style>
     <script>
-        // Toggles the visibility of the navigation menu on small screens
+        // Function to toggle the visibility of the navigation menu on small screens
         function toggleMenu() {
             document.getElementById("menuLinks").classList.toggle("show");
         }
-        // Redirects to cart page when cart icon is clicked
-        document.getElementById("cart-icon").onclick =function () {
-            window.location.href ="cart.html";
+        // Assigns a click event to the cart icon to redirect to the cart page
+        document.getElementById("cart-icon").onclick = function () {
+            window.location.href = "cart.html";
         };
-        // Redirects to home page when logo is clicked
-        document.getElementById("logo").onclick =function () {
-            window.location.href ="index.html";
+        // Assigns a click event to the logo to redirect to the home page
+        document.getElementById("logo").onclick = function () {
+            window.location.href = "index.html";
         }
     </script>
 </head>
 <body>
-    <!-- Header section containing the navigation bar -->
+    <!-- Header section containing the navigation bar and branding -->
     <header>
         <nav class="navbar">
             <div class="left-menu">
-                <!-- Hamburger menu icon for mobile navigation -->
+                <!-- Hamburger menu icon for toggling navigation links on mobile devices -->
                 <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-                <!-- Collapsible menu links for navigation -->
+                <!-- Collapsible menu links for main product categories -->
                 <div class="menu-links" id="menuLinks">
                     <a href="living-room.html" tabindex="3">LIVING ROOM</a>
                     <a href="bedroom.html" tabindex="4">BEDROOM</a>
                     <a href="dinettes.html" tabindex="5">DINETTES</a>
                     <a href="homedecor.html" tabindex="6">HOME DECOR</a>
                 </div>
-                <!-- Additional navigation links -->
+                <!-- Additional navigation links for contact, about, home, and landing page -->
                 <a href="contact.html" tabindex="7">CONTACT US</a>
                 <a href="about.html" tabindex="8">ABOUT US</a>
                 <a href="index.html" tabindex="9">HOME</a>
-                <!-- Company name as heading -->
+                <a href="landingpage.html" tabindex="10">LANDING PAGE</a>
+                <!-- Company name as a heading for branding, accessible via keyboard -->
                 <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
             </div>
-            <div class="right-menu" tabindex="10">
-                <!-- Company logo, clickable to go home -->
-                <span class="icon" tabindex="11">
-                    <img src="images/logo.png" style="width: 55px; height: 55px;" id="logo" onclick="window.location.href='index.html'" alt="Company logo with a sofa and a night table" id="logo" tabindex="12">
+            <div class="right-menu" tabindex="11">
+                <!-- Company logo image, clickable to return to the home page -->
+                <span class="icon" tabindex="12">
+                    <img src="images/logo.png"
+                        style="width: 55px; height: 55px;"
+                        id="logo"
+                        onclick="window.location.href='index.html'"
+                        alt="Company logo with a sofa and a night table"
+                        tabindex="13">
                 </span>
-                <!-- Search bar for product search -->
-                <input type="text" placeholder="Search..." class="search-bar" tabindex="13" />
-                <!-- Cart icon, clickable to go to cart page -->
-                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="14">🛒</span>
+                <!-- Search bar for users to search for products -->
+                <input type="text" placeholder="Search..." class="search-bar" tabindex="14" />
+                <!-- Cart icon, clickable to go to the shopping cart page -->
+                <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="15">🛒</span>
             </div>
         </nav>
     </header>
-    <!-- Main content: About Us heading with fade-in animation -->
+    <!-- Main content section: About Us heading with fade-in animation -->
     <section class="center-content">
-        <i><b><h1 tabindex="15">About Us</h1></b></i>
+        <!-- Heading for the About Us section, styled bold and italic, keyboard accessible -->
+        <i><b><h1 tabindex="16">About Us</h1></b></i>
     </section>
-    <!-- Company history and description -->
-    <section class="center-content">
-        <p tabindex="16">Surplus Furniture and Mattress Warehouse opened its doors to the public in 2002 with 5 strategically placed locations across Canada, planting roots in Calgary, Edmonton, Winnipeg, Ottawa, and St. John’s.</p>
-        <p tabindex="17">Surplus Furniture quickly became a top furniture and mattress retailer with the buying power to provide incredible value at a warehouse price! Our concept is simple; use a low overhead warehouse and offer quality brand name furniture and mattresses, purchased direct from the factory at deep discounts and pass the savings on to the customers. This strategy has provided customers with sofas, loveseats, sectionals, motion furniture, recliners, coffee tables, lamps, TV stands, area rugs, bedrooms, mattresses, dinettes, bunk beds, accent furniture and much more at unbeatable low prices.
+    <!-- Section describing the company's history and business model -->
+    <section class="center-content"></section>
+        <!-- Paragraphs detailing the company's founding, growth, and business strategy -->
+        <p tabindex="17">
+            Surplus Furniture and Mattress Warehouse opened its doors to the public in 2002 with 5 strategically placed locations across Canada, planting roots in Calgary, Edmonton, Winnipeg, Ottawa, and St. John’s.
         </p>
-        <p tabindex="18">With this strong focus, along with great customer service and Same Day Delivery, the dedicated employees of Surplus Furniture and Mattress Warehouse set their sights on growth. Surplus Furniture began to expand to other provinces with locations in New Brunswick, Nova Scotia, PEI and Saskatchewan while continuing to add locations in Alberta, Manitoba, Ontario and Newfoundland.
+        <p tabindex="18">
+            Surplus Furniture quickly became a top furniture and mattress retailer with the buying power to provide incredible value at a warehouse price! Our concept is simple; use a low overhead warehouse and offer quality brand name furniture and mattresses, purchased direct from the factory at deep discounts and pass the savings on to the customers. This strategy has provided customers with sofas, loveseats, sectionals, motion furniture, recliners, coffee tables, lamps, TV stands, area rugs, bedrooms, mattresses, dinettes, bunk beds, accent furniture and much more at unbeatable low prices.
         </p>
+        <p tabindex="19">
+            With this strong focus, along with great customer service and Same Day Delivery, the dedicated employees of Surplus Furniture and Mattress Warehouse set their sights on growth. Surplus Furniture began to expand to other provinces with locations in New Brunswick, Nova Scotia, PEI and Saskatchewan while continuing to add locations in Alberta, Manitoba, Ontario and Newfoundland.
+        </p>
+        <!-- Line breaks for spacing before the video section -->
         <br>
         <br>
-        <h1 tabindex="19">This is a youtube video about our furniture, a few years ago.</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/NKU32Ky2AeY?si=EmE2SYiEJvl5qlRJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen tabindex="20" alt="This a youtube video from a few years ago of our company surplus furniture"></iframe>
+        <!-- Heading introducing the embedded YouTube videos -->
+        <h1 tabindex="20">This is a youtube video about our furniture, a few years ago.</h1>
+        <!-- First embedded YouTube video showcasing the company -->
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/NKU32Ky2AeY?si=EmE2SYiEJvl5qlRJ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                tabindex="21"
+                alt="This a youtube video from a few years ago of our company surplus furniture"></iframe>
+        <!-- Line break for spacing between videos -->
+        <br>
+        <!-- Second embedded YouTube video for additional company content -->
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/rMr9w0_nPiY?si=IAgzWm6OUYWM54wj"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                tabindex="22"
+                alt="This a youtube video from a few years ago of our company surplus furniture"></iframe>
     </section>
-    <!-- Section heading for current company status -->
+    <!-- Section heading for the company's current status, styled with underline, bold, and italic -->
     <section class="center-content">
         <i>
             <b>
                 <u>
-                    <h1 id="surplusfurniture-heading" tabindex="21">Surplus Furniture Today</h1>
+                    <h1 id="surplusfurniture-heading" tabindex="23">Surplus Furniture Today</h1>
                 </u>
             </b>
         </i>
     </section>
-    <!-- Description of current operations and offerings -->
+    <!-- Section describing the company's present-day operations and offerings -->
     <section class="center-content">
-        <p tabindex="22">Today Surplus Furniture has grown to 33 locations across the country and we continue to actively search for new locations to bring the best value on furniture and mattresses to every marketplace. We continue to focus on a simple warehouse concept with no fancy displays, carpets or lighting and still offer unique features like Same Day Delivery on all in-stock furniture. All while providing flexible payment options like 100% Free Layaway, on-the-spot-financing with No Interest, No Payments for 1-Year (OAC) or simply using the standard methods of payment.
+        <p tabindex="24">
+            Today Surplus Furniture has grown to 33 locations across the country and we continue to actively search for new locations to bring the best value on furniture and mattresses to every marketplace. We continue to focus on a simple warehouse concept with no fancy displays, carpets or lighting and still offer unique features like Same Day Delivery on all in-stock furniture. All while providing flexible payment options like 100% Free Layaway, on-the-spot-financing with No Interest, No Payments for 1-Year (OAC) or simply using the standard methods of payment.
         </p>
-        <h1 tabindex="23">The picture below shows how our stores look like today</h1>
-        <img src="images/surplus-furniture.jpg" alt="surplus furniture store with a bunch of elegant pieces of furniture" tabindex="24">
+        <!-- Heading introducing the store image -->
+        <h1 tabindex="25">The picture below shows how our stores look like today</h1>
+        <!-- Image showing the current appearance of the company's stores, centered and keyboard accessible -->
+        <img src="images/surplus-furniture.jpg"
+            alt="surplus furniture store with a bunch of elegant pieces of furniture"
+            tabindex="26">
     </section>
-    <!-- Section highlighting price guarantee and experience -->
+    <!-- Section highlighting the company's price guarantee and industry experience -->
     <section class="center-content">
-        <p tabindex="25">You will also not find a competitor that can match our prices! We are so confident in our prices that we guarantee it with our <span style="font-weight: bold;">iSave Best Price Guarantee!</span> We will always beat the valid in-stock and advertised price of all local competitors.
+        <p tabindex="27">
+            You will also not find a competitor that can match our prices! We are so confident in our prices that we guarantee it with our <span style="font-weight: bold;">iSave Best Price Guarantee!</span> We will always beat the valid in-stock and advertised price of all local competitors.
         </p>
-        <p tabindex="26"><span style="font-weight: bold;"> With over 30 years experience</span> in the industry, our furniture experts continue to negotiate special volume discounts in order to secure the lowest price possible on quality brand name furniture for our customers. We are proud that we have been saving consumers money since our inception.
+        <p tabindex="28">
+            <span style="font-weight: bold;"> With over 30 years experience</span> in the industry, our furniture experts continue to negotiate special volume discounts in order to secure the lowest price possible on quality brand name furniture for our customers. We are proud that we have been saving consumers money since our inception.
         </p>
     </section>
-    <!-- Footer with copyright and social media links -->
+    <!-- Footer section with copyright, image attribution, and social media links -->
     <footer>
         <b>
-            <p tabindex="27">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-            <p tabindex="28">The second image is AI generated by Deep AI</p>
-            <p tabindex="29">Follow us on social media: 
-                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="30">Facebook</a> | 
-                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="31">Instagram</a> | 
-                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="32">Youtube</a> |
-                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="33">Pinterest</a> |
-                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="34">Tiktok</a>
+            <!-- Copyright notice for the company -->
+            <p tabindex="29">&copy; 2025 Surplus Furniture. All rights reserved.</p>
+            <!-- Attribution for the AI-generated image -->
+            <p tabindex="30">The second image is AI generated by Deep AI</p>
+            <!-- Social media links for users to follow the company, each opens in a new tab and is keyboard accessible -->
+            <p tabindex="31">Follow us on social media: 
+                <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="32">Facebook</a> | 
+                <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="33">Instagram</a> | 
+                <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="34">Youtube</a> |
+                <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="35">Pinterest</a> |
+                <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="36">Tiktok</a>
             </p>
         </b>
     </footer>

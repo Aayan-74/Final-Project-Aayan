@@ -1,106 +1,132 @@
 <!DOCTYPE html>
+<!-- Declares this document as an HTML5 document -->
 <html lang="en">
 <head>
-  <!-- Meta tags for character encoding and responsive design -->
+  <!-- Sets character encoding to UTF-8 for universal character support -->
   <meta charset="UTF-8" />
+  <!-- Ensures the page is responsive on all device widths -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Title displayed in the browser tab -->
   <title>Contact Us</title>
-  <!-- External CSS and Google Fonts -->
+
+  <!-- External CSS stylesheet link for page styling -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Preconnect to Google's font servers for faster font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Import Open Sans font family for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Import Archivo Black font for bold headers or titles -->
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS styles specific to this page -->
   <style>
-    /* Basic body reset */
+    /* Reset default margin and padding for the body to remove unwanted space */
     body {
       margin: 0;
       padding: 0;
     }
-    /* Contact form layout and style */
+
+    /* Styles the form as a vertical flex container for stacked inputs */
     form {
       display: flex;
       flex-direction: column;
-      font-size: 1.2rem;
+      font-size: 1.2rem; /* Larger font size for readability */
     }
-    /* Input and textarea styling */
+
+    /* Common styling for all input fields and textarea */
     input, textarea {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+      border: 1px solid #ccc; /* Light gray border */
+      border-radius: 4px;     /* Rounded corners for softer look */
+      font-size: 1rem;        /* Base font size */
+      padding: 0.5rem;        /* Internal spacing for comfort */
+      margin-bottom: 1rem;    /* Space below each input */
     }
+
+    /* Allow textarea to only be resized vertically */
     textarea {
       resize: vertical;
     }
-    /* Contact form heading */
+
+    /* Center and style the main heading for the contact form */
     #contact-us-heading {
       text-align: center;
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
     }
-    /* Container for contact form and info */
+
+    /* Container holding the form and contact info side-by-side */
     .contact-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 4rem;
-      padding: 4rem;
-      flex-wrap: wrap; /* Responsive for small screens */
-      animation: fadeIn 2s ease-in-out;
+      display: flex;                  /* Use flexbox for layout */
+      justify-content: center;        /* Center horizontally */
+      align-items: flex-start;        /* Align items to top */
+      gap: 4rem;                     /* Space between form and info */
+      padding: 4rem;                 /* Outer padding around container */
+      flex-wrap: wrap;               /* Wrap on smaller screens */
+      animation: fadeIn 2s ease-in-out; /* Fade in animation */
     }
-    /* Fade-in animation for contact container */
+
+    /* Fade-in animation keyframes */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    /* Contact form box styling */
+
+    /* Styles for the contact form box */
     .contact-form {
-      background-color: rgb(93, 25, 25);
-      color: white;
-      padding: 6rem;
-      margin-top: 12rem;
-      border-radius: 8px;
-      width: 600px;
-      height: 100%;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      background-color: rgb(93, 25, 25); /* Dark red background */
+      color: white;                      /* White text for contrast */
+      padding: 6rem;                    /* Spacious padding inside */
+      margin-top: 12rem;                /* Large margin to push form down */
+      border-radius: 8px;               /* Rounded corners */
+      width: 600px;                    /* Fixed width */
+      height: 100%;                    /* Full height relative to container */
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     }
-    /* Contact info section styling */
+
+    /* Styles for the contact info box next to the form */
     .contact-info {
-      max-width: 30rem;
-      font-size: 1.6rem;
-      margin-top: 4rem;
-      box-sizing: border-box;
+      max-width: 30rem;   /* Limit maximum width */
+      font-size: 1.6rem;  /* Larger font for readability */
+      margin-top: 4rem;   /* Spacing from top */
+      box-sizing: border-box; /* Includes padding and border in width */
     }
-    /* Heading inside contact info */
+
+    /* Header inside the contact info box */
     .contact-info h1 {
       line-height: 1.6;
       font-size: 1.6rem;
-      word-wrap: break-word;
+      word-wrap: break-word;           /* Break long words if needed */
       margin: 0;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;                   /* Inner padding */
+      background-color: #f9f9f9;       /* Light gray background */
+      border-radius: 8px;              /* Rounded corners */
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     }
-    /* Search bar styling in navbar */
+
+    /* Styles for the search bar input in the nav */
     .search-bar {
       margin: 0 1rem;
       padding: 0.4rem;
       align-items: center;
     }
-    /* Individual contact info sections (phone, address, etc.) */
+
+    /* Styles for individual contact info sections */
     .contact-info-section {
-      margin-bottom: 1.5rem;
-      padding: 2rem;
+      margin-bottom: 1.5rem;             /* Space between sections */
+      padding: 2rem;                     /* Inner padding */
       font-size: 1rem;
-      color: white;
-      background-color: rgb(93, 25, 25);
+      color: white;                     /* White text for contrast */
+      background-color: rgb(93, 25, 25); /* Same dark red background */
       border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
-    /* Heading for methods of reaching out */
+
+    /* Heading styling for contact methods */
     #methods-of-reaching-out {
       text-align: center;
       font-size: 1.4rem;
@@ -108,145 +134,174 @@
       color: white;
       background-color: rgb(93, 25, 25);
     }
-    /* FAQ grid layout */
+
+    /* FAQ grid layout with two equal columns */
     .faq-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
+      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+      gap: 1.5rem;                   /* Space between grid items */
+      max-width: 1000px;             /* Max width to contain FAQs */
+      margin: auto;                  /* Center grid horizontally */
     }
-    .faq-grid details {
-  margin: 0.5rem 0;
-  display: block;
-}
 
-    /* FAQ details box styling */
+    /* Styling individual collapsible FAQ items */
+    .faq-grid details {
+      margin: 0.5rem 0;
+      display: block;
+    }
+
+    /* Styles for each details block */
     details {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: #fff;              /* White background */
+      border: 1px solid #ddd;        /* Light border */
       border-radius: 5px;
       padding: 1rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-    /* FAQ summary (question) styling */
+
+    /* FAQ question styling */
     summary {
-      cursor: pointer;
-      font-weight: bold;
-      position: relative;
-      list-style: none;
+      cursor: pointer;              /* Pointer cursor for clickable */
+      font-weight: bold;            /* Bold text for questions */
+      position: relative;           /* For positioning arrow */
+      list-style: none;             /* Remove default marker */
     }
-    /* Remove default arrow from summary */
+
+    /* Remove default marker/bullet from summary */
     summary::marker {
       display: none;
     }
-    /* Custom arrow for summary */
+
+    /* Custom downward arrow before summary text */
     summary::before {
-      content: "⌄";
+      content: "⌄";                /* Unicode down arrow symbol */
       position: absolute;
-      right: 0;
+      right: 0;                   /* Position arrow on the right */
       font-size: 1rem;
-      transition: transform 0.3s;
+      transition: transform 0.3s; /* Smooth rotation on toggle */
     }
-    /* Rotate arrow when details open */
+
+    /* Rotate arrow up when FAQ item is open */
     details[open] summary::before {
       transform: rotate(180deg);
     }
-    /* FAQ answer paragraph styling */
+
+    /* FAQ answer text styling inside details */
     details p {
       margin-top: 1rem;
       font-size: 0.95rem;
-      color: #333;
+      color: #333;                /* Dark gray for readability */
     }
-    /* FAQ section container styling */
+
+    /* Wrapper for the entire FAQ section */
     .faq-section {
       padding: 2rem;
-      background-color: rgb(93, 25, 25);
+      background-color: rgb(93, 25, 25); /* Dark red background */
       border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     }
-    /* FAQ heading styling */
+
+    /* FAQ main heading styling */
     #faq-heading {
       text-align: center;
       font-size: 1.6rem;
       color: white;
       margin-bottom: 1.5rem;
     }
-    
   </style>
 </head>
+
 <body>
-  <!-- Navigation bar/header -->
+  <!-- Site header containing navigation bar -->
   <header>
     <nav class="navbar">
-      <!-- Left menu with collapsible links -->
+      <!-- Left side menu with navigation links -->
       <div class="left-menu">
-        <!-- Hamburger menu icon for mobile -->
+        <!-- Hamburger menu button for mobile navigation toggle -->
         <button class="menu-icon" onclick="toggleMenu()" tabindex="2">&#9776;</button>
-        <!-- Collapsible menu links -->
+
+        <!-- Collapsible menu links for categories -->
         <div class="menu-links" id="menuLinks">
           <a href="living-room.html" tabindex="3">LIVING ROOM</a>
           <a href="bedroom.html" tabindex="4">BEDROOM</a>
           <a href="dinettes.html" tabindex="5">DINETTES</a>
           <a href="homedecor.html" tabindex="6">HOME DECOR</a>
         </div>
-        <!-- Main navigation links -->
+
+        <!-- Additional main navigation links -->
         <a href="contact.html" tabindex="7">CONTACT US</a>
         <a href="about.html" tabindex="8">ABOUT US</a>
         <a href="index.html" tabindex="9">HOME</a>
-        <!-- Company name/logo -->
+
+        <!-- Company name or logo text -->
         <h1 class="surplusfurniture" tabindex="1">Surplus Furniture</h1>
       </div>
+
+      <!-- Right side menu with logo, search, and cart -->
       <div class="right-menu" tabindex="10">
-        <!-- Company logo image -->
-        <span class="icon"><img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="11" onclick="window.location.href='index.html'"></span>
-        <!-- Search bar -->
+        <!-- Company logo image, clickable to home -->
+        <span class="icon">
+          <img src="images/logo.png" style="width: 55px; height: 55px;" alt="Company logo with a sofa and a night table" id="logo" tabindex="11" onclick="window.location.href='index.html'">
+        </span>
+
+        <!-- Search input field -->
         <input type="text" placeholder="Search..." class="search-bar" tabindex="12" />
-        <!-- Cart icon button -->
+
+        <!-- Shopping cart icon, clickable to cart page -->
         <span class="icon" id="cart-icon" onclick="window.location.href='cart.html'" tabindex="13">🛒</span>
       </div>
     </nav>
   </header>
 
-  <!-- Main content: Contact form and info -->
+  <!-- Main content container for contact form and company contact info -->
   <main class="contact-container" tabindex="14">
-    <!-- Contact Form Section -->
+    <!-- Contact form box -->
     <div class="contact-form" tabindex="15">
+      <!-- Form heading -->
       <h1 id="contact-us-heading" tabindex="16">Contact us</h1>
+      <!-- Subheading explaining form purpose -->
       <h2 tabindex="17">If you have any concerns about warranty of a product, delivery dates, issues and concers, then reach out to us using the form below:</h2>
+
+      <!-- Contact form with name, email, and message fields -->
       <form>
         <input type="text" id="name" name="name" placeholder="Type Your Name Here" required tabindex="18" />
         <input type="email" id="email" name="email" placeholder="Type Your Email Here" required tabindex="19" />
         <textarea id="message" name="message" rows="4" placeholder="Type Your Issues Or Concerns Here" required tabindex="20"></textarea>
+        <!-- Submit button shows alert on click -->
         <button type="submit" tabindex="21" id="submit-button" onclick="alert('Your message has been recorded we will get back to you as soon as possible.')">Send Message</button>
       </form>
     </div>
 
-    <!-- Contact Info Section -->
+    <!-- Company contact info box -->
     <div class="contact-info" tabindex="22">
+      <!-- Heading for contact methods -->
       <h1 id="methods-of-reaching-out" tabindex="23">Feel free to reach out to us using the following methods below:</h1>
       <br>
-      <!-- Phone number -->
+
+      <!-- Phone number section -->
       <section class="contact-info-section">
         <h2 tabindex="24">Phone Number: 204-772-3330</h2>
       </section>
-      <!-- Location 1 with embedded Google Map -->
+
+      <!-- Location 1 section with embedded Google Map -->
       <section class="contact-info-section">
         <h2 tabindex="25">Location 1: 1190-1200 St. James Street<br>Winnipeg, MB, R3H 0L2</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.888319178301!2d-97.20028000000002!3d49.9009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73a089ac00dd%3A0x7d4ca27d7defea3c!2sSurplus%20Furniture%20and%20Mattress%20Warehouse!5e0!3m2!1sen!2sca!4v1748807805847!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="26"></iframe>
       </section>
-      <!-- Location 2 with embedded Google Map -->
+
+      <!-- Location 2 section with embedded Google Map -->
       <section class="contact-info-section">
         <h2 tabindex="27">Location 2: 990 Nairn Avenue Winnipeg, MB, R2L 0Y2</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82237.37443631614!2d-97.23453830273431!3d49.90034369999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea70c389309db7%3A0x1ecdd918ed4fc78d!2sSurplus%20Furniture%20and%20Mattress%20Warehouse!5e0!3m2!1sen!2sca!4v1748807910033!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="28"></iframe>
       </section>
     </div>
   </main>
-  <!-- FAQ Section -->
+
+  <!-- FAQ section with common questions and answers -->
   <section class="faq-section" tabindex="29">
     <h1 id="faq-heading" tabindex="30">Frequently asked questions:</h1>
     <div class="faq-grid">
-      <!-- Each FAQ uses <details> for collapsible Q&A -->
+      <!-- Each FAQ question is a collapsible details element -->
       <details>
         <summary tabindex="31">How can I find a store near me?</summary>
         <p tabindex="32">Use our store locator to find a nearby location by entering your zip code.</p>
@@ -318,22 +373,22 @@
       </details>
     </div>
   </section>
-  <br>
-  <br>
-  <br>
-  <!-- Footer with copyright and social media links -->
+
+  <br><br><br> <!-- Spacing before footer -->
+
+  <!-- Page footer with copyright and social media links -->
   <footer tabindex="71">
     <b>
       <p tabindex="72">&copy; 2025 Surplus Furniture. All rights reserved.</p>
-      <p tabindex="73">Follow us on social media: 
-        <a href="https://www.facebook.com/surplusfurniture" target="_blank" tabindex="74">Facebook</a> | 
-        <a href="https://www.instagram.com/surplusfurniturecanada/" target="_blank" tabindex="75">Instagram</a> | 
-        <a href="https://www.youtube.com/user/SurplusFurniture" target="_blank" tabindex="76">Youtube</a> |
-        <a href="https://in.pinterest.com/surplusfurniturecanada/?eq=surplus%20furniture&etslf=4241" target="_blank" tabindex="77">Pinterest</a> |
-        <a href="https://www.tiktok.com/@surplusfurniturecanada" target="_blank" tabindex="78">Tiktok</a>
+      <p tabindex="73">
+        Follow us on social media: 
+        <a href="https://www.facebook.com" target="_blank" tabindex="74">Facebook</a>, 
+        <a href="https://www.instagram.com" target="_blank" tabindex="75">Instagram</a>, 
+        <a href="https://www.twitter.com" target="_blank" tabindex="76">Twitter</a>
       </p>
     </b>
   </footer>
+
   <script>
   function toggleMenu() {
     document.getElementById("menuLinks").classList.toggle("show");
