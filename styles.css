@@ -251,14 +251,14 @@ h2 {
   box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   justify-content: center; /* (No effect unless flex container) */
   align-self: center; /* (No effect unless flex item) */
-  animation: fade In, 2s, ease-in-out; /* Typo: should be fadeIn 2s ease-in-out */
+  -webkit-animation: fade In, 2s, ease-in-out, forwards; /* Typo: should be fadeIn 2s ease-in-out */
 }
 
 /* 
   ====== Fade-in Animation Keyframes ======
   Defines animation for fading in elements smoothly.
 */
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
@@ -408,9 +408,9 @@ a:hover {
 /* 
   Staggered animation delays for each image column for a cascading effect.
 */
-.img-col:nth-child(1) { animation-delay: 0.2s; }
-.img-col:nth-child(2) { animation-delay: 0.5s; }
-.img-col:nth-child(3) { animation-delay: 0.8s; }
+.img-col:nth-child(1) { -webkit-animation-delay: 0.2s; }
+.img-col:nth-child(2) { -webkit-animation-delay: 0.5s; }
+.img-col:nth-child(3) { -webkit-animation-delay: 0.8s; }
 
 .img-col img {
   width: 100%; /* Image fills column width */
@@ -455,7 +455,7 @@ a:hover {
   ====== Fade-in Animation for Images ======
   Keyframes for image fade-in with upward movement.
 */
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0; /* Starts invisible */
     transform: translateY(20px); /* Starts 20px lower */
